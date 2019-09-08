@@ -1,5 +1,5 @@
 Assembler report for practica1
-Thu Sep  5 23:47:27 2019
+Sun Sep  8 14:31:54 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -38,11 +38,11 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Sep  5 23:47:27 2019 ;
+; Assembler Status      ; Successful - Sun Sep  8 14:31:54 2019 ;
 ; Revision Name         ; practica1                             ;
 ; Top-level Entity Name ; practica1                             ;
 ; Family                ; Cyclone II                            ;
-; Device                ; EP2C5T144C7                           ;
+; Device                ; EP2C5T144C8                           ;
 +-----------------------+---------------------------------------+
 
 
@@ -93,9 +93,9 @@ applicable agreement for further details.
 +----------------+------------------------+
 ; Option         ; Setting                ;
 +----------------+------------------------+
-; Device         ; EP2C5T144C7            ;
-; JTAG usercode  ; 0x00073C37             ;
-; Checksum       ; 0x00073C37             ;
+; Device         ; EP2C5T144C8            ;
+; JTAG usercode  ; 0x000736C9             ;
+; Checksum       ; 0x000736C9             ;
 +----------------+------------------------+
 
 
@@ -106,7 +106,7 @@ applicable agreement for further details.
 +--------------------+--------------------+
 ; Device             ; EPCS4              ;
 ; JTAG usercode      ; 0x00000000         ;
-; Checksum           ; 0x0752F1CB         ;
+; Checksum           ; 0x075316B0         ;
 ; Compression Ratio  ; 3                  ;
 +--------------------+--------------------+
 
@@ -117,13 +117,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Sep  5 23:47:26 2019
+    Info: Processing started: Sun Sep  8 14:31:53 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off practica1 -c practica1
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 32-bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 327 megabytes
-    Info: Processing ended: Thu Sep  5 23:47:27 2019
+    Info: Processing ended: Sun Sep  8 14:31:54 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

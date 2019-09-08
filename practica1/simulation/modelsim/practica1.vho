@@ -16,10 +16,10 @@
 -- PROGRAM "Quartus II 32-bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "09/05/2019 23:47:31"
+-- DATE "09/08/2019 14:31:57"
 
 -- 
--- Device: Altera EP2C5T144C7 Package TQFP144
+-- Device: Altera EP2C5T144C8 Package TQFP144
 -- 
 
 -- 
@@ -43,11 +43,11 @@ ENTITY 	practica1 IS
 END practica1;
 
 -- Design Ports Information
--- A	=>  Location: PIN_125,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
--- B	=>  Location: PIN_120,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
--- C	=>  Location: PIN_132,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
--- D	=>  Location: PIN_129,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
--- clk	=>  Location: PIN_126,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- A	=>  Location: PIN_4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- B	=>  Location: PIN_143,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- C	=>  Location: PIN_142,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- D	=>  Location: PIN_141,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- clk	=>  Location: PIN_3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- reset	=>  Location: PIN_17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 
 
@@ -97,7 +97,7 @@ ww_devpor <= devpor;
 
 \reset~clkctrl_INCLK_bus\ <= (gnd & gnd & gnd & \reset~combout\);
 
--- Location: PIN_126,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \clk~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
@@ -123,7 +123,7 @@ PORT MAP (
 	padio => ww_clk,
 	combout => \clk~combout\);
 
--- Location: LCCOMB_X15_Y12_N28
+-- Location: LCCOMB_X1_Y13_N12
 \inst|26~0\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \inst|26~0_combout\ = !\inst|26~regout\
@@ -176,7 +176,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	outclk => \reset~clkctrl_outclk\);
 
--- Location: LCFF_X15_Y12_N29
+-- Location: LCFF_X1_Y13_N13
 \inst|26\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clk~combout\,
@@ -186,7 +186,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst|26~regout\);
 
--- Location: LCCOMB_X15_Y12_N26
+-- Location: LCCOMB_X1_Y13_N8
 \inst|5\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \inst|5~combout\ = LCELL((\clk~combout\) # (!\inst|26~regout\))
@@ -201,7 +201,7 @@ PORT MAP (
 	datad => \inst|26~regout\,
 	combout => \inst|5~combout\);
 
--- Location: LCCOMB_X15_Y12_N24
+-- Location: LCCOMB_X1_Y13_N24
 \inst|25~0\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \inst|25~0_combout\ = !\inst|25~regout\
@@ -215,7 +215,7 @@ PORT MAP (
 	datac => \inst|25~regout\,
 	combout => \inst|25~0_combout\);
 
--- Location: LCFF_X15_Y12_N25
+-- Location: LCFF_X1_Y13_N25
 \inst|25\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \inst|5~combout\,
@@ -225,7 +225,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst|25~regout\);
 
--- Location: LCCOMB_X15_Y12_N30
+-- Location: LCCOMB_X1_Y13_N30
 \inst|51\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \inst|51~combout\ = LCELL((\clk~combout\) # ((!\inst|26~regout\) # (!\inst|25~regout\)))
@@ -241,7 +241,7 @@ PORT MAP (
 	datad => \inst|26~regout\,
 	combout => \inst|51~combout\);
 
--- Location: LCCOMB_X14_Y12_N14
+-- Location: LCCOMB_X2_Y13_N30
 \inst|24~0\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \inst|24~0_combout\ = !\inst|24~regout\
@@ -255,7 +255,7 @@ PORT MAP (
 	datac => \inst|24~regout\,
 	combout => \inst|24~0_combout\);
 
--- Location: LCFF_X14_Y12_N15
+-- Location: LCFF_X2_Y13_N31
 \inst|24\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \inst|51~combout\,
@@ -265,10 +265,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst|24~regout\);
 
--- Location: LCCOMB_X15_Y12_N14
+-- Location: LCCOMB_X1_Y13_N14
 \inst|21\ : cycloneii_lcell_comb
 -- Equation(s):
--- \inst|21~combout\ = LCELL((\clk~combout\) # (((!\inst|24~regout\) # (!\inst|25~regout\)) # (!\inst|26~regout\)))
+-- \inst|21~combout\ = LCELL((\clk~combout\) # (((!\inst|26~regout\) # (!\inst|25~regout\)) # (!\inst|24~regout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -277,12 +277,12 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \clk~combout\,
-	datab => \inst|26~regout\,
+	datab => \inst|24~regout\,
 	datac => \inst|25~regout\,
-	datad => \inst|24~regout\,
+	datad => \inst|26~regout\,
 	combout => \inst|21~combout\);
 
--- Location: LCCOMB_X14_Y12_N30
+-- Location: LCCOMB_X2_Y13_N12
 \inst|23~0\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \inst|23~0_combout\ = !\inst|23~regout\
@@ -296,7 +296,7 @@ PORT MAP (
 	datac => \inst|23~regout\,
 	combout => \inst|23~0_combout\);
 
--- Location: LCFF_X14_Y12_N31
+-- Location: LCFF_X2_Y13_N13
 \inst|23\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \inst|21~combout\,
@@ -306,7 +306,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst|23~regout\);
 
--- Location: PIN_125,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- Location: PIN_4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 \A~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
@@ -332,7 +332,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_A);
 
--- Location: PIN_120,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- Location: PIN_143,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 \B~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
@@ -358,7 +358,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_B);
 
--- Location: PIN_132,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- Location: PIN_142,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 \C~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
@@ -384,7 +384,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_C);
 
--- Location: PIN_129,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- Location: PIN_141,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 \D~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
