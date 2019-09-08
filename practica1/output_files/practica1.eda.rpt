@@ -1,5 +1,5 @@
 EDA Netlist Writer report for practica1
-Sun Sep  8 14:31:57 2019
+Sun Sep  8 15:43:25 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Sep  8 14:31:57 2019 ;
+; EDA Netlist Writer Status ; Successful - Sun Sep  8 15:43:25 2019 ;
 ; Revision Name             ; practica1                             ;
 ; Top-level Entity Name     ; practica1                             ;
 ; Family                    ; Cyclone II                            ;
@@ -84,12 +84,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Sep  8 14:31:56 2019
+    Info: Processing started: Sun Sep  8 15:43:24 2019
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off practica1 -c practica1
 Info (204026): Generated files "practica1.vho", "practica1_fast.vho", "practica1_vhd.sdo" and "practica1_vhd_fast.sdo" in directory "/home/penserbjorne/Proyectos/clase-arquitectura-computadoras-2020-1/practica1/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 32-bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 320 megabytes
-    Info: Processing ended: Sun Sep  8 14:31:57 2019
+    Info: Processing ended: Sun Sep  8 15:43:25 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 

@@ -1,5 +1,5 @@
 Flow report for practica1
-Sun Sep  8 14:31:57 2019
+Sun Sep  8 15:43:25 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,17 +40,17 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sun Sep  8 14:31:57 2019           ;
+; Flow Status                        ; Successful - Sun Sep  8 15:43:25 2019           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; practica1                                       ;
 ; Top-level Entity Name              ; practica1                                       ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C5T144C8                                     ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 7 / 4,608 ( < 1 % )                             ;
-;     Total combinational functions  ; 7 / 4,608 ( < 1 % )                             ;
-;     Dedicated logic registers      ; 4 / 4,608 ( < 1 % )                             ;
-; Total registers                    ; 4                                               ;
+; Total logic elements               ; 46 / 4,608 ( < 1 % )                            ;
+;     Total combinational functions  ; 46 / 4,608 ( < 1 % )                            ;
+;     Dedicated logic registers      ; 32 / 4,608 ( < 1 % )                            ;
+; Total registers                    ; 32                                              ;
 ; Total pins                         ; 6 / 89 ( 7 % )                                  ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 119,808 ( 0 % )                             ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/08/2019 14:31:48 ;
+; Start date & time ; 09/08/2019 15:43:14 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; practica1           ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 0.156797110807949      ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 0.156797539412205      ; --            ; --          ; --                                ;
 ; EDA_INPUT_DATA_FORMAT               ; Edif                   ; --            ; --          ; eda_design_synthesis              ;
 ; EDA_INPUT_VCC_NAME                  ; Vcc                    ; --            ; --          ; eda_design_synthesis              ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                   ; --            ; --          ; eda_simulation                    ;
@@ -99,12 +99,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:00     ; 1.0                     ; 341 MB              ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 361 MB              ; 00:00:01                           ;
 ; Fitter                    ; 00:00:02     ; 1.0                     ; 398 MB              ; 00:00:02                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 327 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 294 MB              ; 00:00:00                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 298 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 309 MB              ; 00:00:00                           ;
-; Total                     ; 00:00:04     ; --                      ; --                  ; 00:00:04                           ;
+; Total                     ; 00:00:06     ; --                      ; --                  ; 00:00:05                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
