@@ -1,5 +1,5 @@
 Fitter report for practica2
-Sat Sep 21 22:36:40 2019
+Sat Sep 21 23:36:52 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -62,18 +62,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Sat Sep 21 22:36:40 2019           ;
+; Fitter Status                      ; Successful - Sat Sep 21 23:36:52 2019           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; practica2                                       ;
 ; Top-level Entity Name              ; practica2                                       ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C5T144C8                                     ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 59 / 4,608 ( 1 % )                              ;
-;     Total combinational functions  ; 55 / 4,608 ( 1 % )                              ;
-;     Dedicated logic registers      ; 40 / 4,608 ( < 1 % )                            ;
-; Total registers                    ; 40                                              ;
-; Total pins                         ; 12 / 89 ( 13 % )                                ;
+; Total logic elements               ; 22 / 4,608 ( < 1 % )                            ;
+;     Total combinational functions  ; 17 / 4,608 ( < 1 % )                            ;
+;     Dedicated logic registers      ; 14 / 4,608 ( < 1 % )                            ;
+; Total registers                    ; 14                                              ;
+; Total pins                         ; 13 / 89 ( 15 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 119,808 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 26 ( 0 % )                                  ;
@@ -149,8 +149,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 113 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 113 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 50 ( 0.00 % )      ;
+;     -- Achieved     ; 0 / 50 ( 0.00 % )      ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -173,7 +173,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 110     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 47      ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -189,28 +189,28 @@ The pin-out file can be found in /home/penserbjorne/Proyectos/clase-arquitectura
 +---------------------------------------------+----------------------+
 ; Resource                                    ; Usage                ;
 +---------------------------------------------+----------------------+
-; Total logic elements                        ; 59 / 4,608 ( 1 % )   ;
-;     -- Combinational with no register       ; 19                   ;
-;     -- Register only                        ; 4                    ;
-;     -- Combinational with a register        ; 36                   ;
+; Total logic elements                        ; 22 / 4,608 ( < 1 % ) ;
+;     -- Combinational with no register       ; 8                    ;
+;     -- Register only                        ; 5                    ;
+;     -- Combinational with a register        ; 9                    ;
 ;                                             ;                      ;
 ; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 22                   ;
+;     -- 4 input functions                    ; 13                   ;
 ;     -- 3 input functions                    ; 3                    ;
-;     -- <=2 input functions                  ; 30                   ;
-;     -- Register only                        ; 4                    ;
+;     -- <=2 input functions                  ; 1                    ;
+;     -- Register only                        ; 5                    ;
 ;                                             ;                      ;
 ; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 28                   ;
-;     -- arithmetic mode                      ; 27                   ;
+;     -- normal mode                          ; 17                   ;
+;     -- arithmetic mode                      ; 0                    ;
 ;                                             ;                      ;
-; Total registers*                            ; 40 / 4,851 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 40 / 4,608 ( < 1 % ) ;
+; Total registers*                            ; 14 / 4,851 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 14 / 4,608 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 243 ( 0 % )      ;
 ;                                             ;                      ;
-; Total LABs:  partially or completely used   ; 5 / 288 ( 2 % )      ;
+; Total LABs:  partially or completely used   ; 3 / 288 ( 1 % )      ;
 ; Virtual pins                                ; 0                    ;
-; I/O pins                                    ; 12 / 89 ( 13 % )     ;
+; I/O pins                                    ; 13 / 89 ( 15 % )     ;
 ;     -- Clock pins                           ; 1 / 4 ( 25 % )       ;
 ;                                             ;                      ;
 ; Global signals                              ; 2                    ;
@@ -225,10 +225,10 @@ The pin-out file can be found in /home/penserbjorne/Proyectos/clase-arquitectura
 ; CRC blocks                                  ; 0 / 1 ( 0 % )        ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%         ;
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%         ;
-; Maximum fan-out                             ; 28                   ;
+; Maximum fan-out                             ; 13                   ;
 ; Highest non-global fan-out                  ; 13                   ;
-; Total fan-out                               ; 262                  ;
-; Average fan-out                             ; 2.28                 ;
+; Total fan-out                               ; 116                  ;
+; Average fan-out                             ; 2.27                 ;
 +---------------------------------------------+----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -241,28 +241,28 @@ The pin-out file can be found in /home/penserbjorne/Proyectos/clase-arquitectura
 +---------------------------------------------+---------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                 ; Low                            ;
 ;                                             ;                     ;                                ;
-; Total logic elements                        ; 59 / 4608 ( 1 % )   ; 0 / 4608 ( 0 % )               ;
-;     -- Combinational with no register       ; 19                  ; 0                              ;
-;     -- Register only                        ; 4                   ; 0                              ;
-;     -- Combinational with a register        ; 36                  ; 0                              ;
+; Total logic elements                        ; 22 / 4608 ( < 1 % ) ; 0 / 4608 ( 0 % )               ;
+;     -- Combinational with no register       ; 8                   ; 0                              ;
+;     -- Register only                        ; 5                   ; 0                              ;
+;     -- Combinational with a register        ; 9                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic element usage by number of LUT inputs ;                     ;                                ;
-;     -- 4 input functions                    ; 22                  ; 0                              ;
+;     -- 4 input functions                    ; 13                  ; 0                              ;
 ;     -- 3 input functions                    ; 3                   ; 0                              ;
-;     -- <=2 input functions                  ; 30                  ; 0                              ;
-;     -- Register only                        ; 4                   ; 0                              ;
+;     -- <=2 input functions                  ; 1                   ; 0                              ;
+;     -- Register only                        ; 5                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic elements by mode                      ;                     ;                                ;
-;     -- normal mode                          ; 28                  ; 0                              ;
-;     -- arithmetic mode                      ; 27                  ; 0                              ;
+;     -- normal mode                          ; 17                  ; 0                              ;
+;     -- arithmetic mode                      ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
-; Total registers                             ; 40                  ; 0                              ;
-;     -- Dedicated logic registers            ; 40 / 4608 ( < 1 % ) ; 0 / 4608 ( 0 % )               ;
+; Total registers                             ; 14                  ; 0                              ;
+;     -- Dedicated logic registers            ; 14 / 4608 ( < 1 % ) ; 0 / 4608 ( 0 % )               ;
 ;                                             ;                     ;                                ;
-; Total LABs:  partially or completely used   ; 5 / 288 ( 2 % )     ; 0 / 288 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 3 / 288 ( 1 % )     ; 0 / 288 ( 0 % )                ;
 ;                                             ;                     ;                                ;
 ; Virtual pins                                ; 0                   ; 0                              ;
-; I/O pins                                    ; 12                  ; 0                              ;
+; I/O pins                                    ; 13                  ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 26 ( 0 % )      ; 0 / 26 ( 0 % )                 ;
 ; Total memory bits                           ; 0                   ; 0                              ;
 ; Total RAM block bits                        ; 0                   ; 0                              ;
@@ -275,15 +275,15 @@ The pin-out file can be found in /home/penserbjorne/Proyectos/clase-arquitectura
 ;     -- Registered Output Connections        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 262                 ; 0                              ;
-;     -- Registered Connections               ; 114                 ; 0                              ;
+;     -- Total Connections                    ; 116                 ; 0                              ;
+;     -- Registered Connections               ; 59                  ; 0                              ;
 ;                                             ;                     ;                                ;
 ; External Connections                        ;                     ;                                ;
 ;     -- Top                                  ; 0                   ; 0                              ;
 ;     -- hard_block:auto_generated_inst       ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Partition Interface                         ;                     ;                                ;
-;     -- Input Ports                          ; 4                   ; 0                              ;
+;     -- Input Ports                          ; 5                   ; 0                              ;
 ;     -- Output Ports                         ; 8                   ; 0                              ;
 ;     -- Bidir Ports                          ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
@@ -310,6 +310,7 @@ The pin-out file can be found in /home/penserbjorne/Proyectos/clase-arquitectura
 +-------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; S[0]  ; 96    ; 3        ; 28           ; 9            ; 1           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; S[1]  ; 99    ; 3        ; 28           ; 11           ; 2           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; boton ; 104   ; 3        ; 28           ; 12           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; reloj ; 17    ; 1        ; 0            ; 6            ; 0           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; reset ; 101   ; 3        ; 28           ; 11           ; 0           ; 10                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 +-------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
@@ -338,7 +339,7 @@ The pin-out file can be found in /home/penserbjorne/Proyectos/clase-arquitectura
 +----------+------------------+---------------+--------------+
 ; 1        ; 3 / 19 ( 16 % )  ; 3.3V          ; --           ;
 ; 2        ; 0 / 23 ( 0 % )   ; 3.3V          ; --           ;
-; 3        ; 12 / 23 ( 52 % ) ; 3.3V          ; --           ;
+; 3        ; 13 / 23 ( 57 % ) ; 3.3V          ; --           ;
 ; 4        ; 0 / 24 ( 0 % )   ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
@@ -451,7 +452,7 @@ The pin-out file can be found in /home/penserbjorne/Proyectos/clase-arquitectura
 ; 101      ; 121        ; 3        ; reset                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; 102      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 103      ; 125        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 104      ; 126        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 104      ; 126        ; 3        ; boton                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; 105      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 106      ;            ;          ; GND_PLL2                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 107      ;            ;          ; VCCD_PLL2                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -533,15 +534,15 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                          ;
-+-----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------+--------------+
-; Compilation Hierarchy Node  ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name               ; Library Name ;
-+-----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------+--------------+
-; |practica2                  ; 59 (0)      ; 40 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 12   ; 0            ; 19 (0)       ; 4 (0)             ; 36 (0)           ; |practica2                        ; work         ;
-;    |controlMovimiento:inst| ; 20 (20)     ; 12 (12)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 4 (4)             ; 8 (8)            ; |practica2|controlMovimiento:inst ; work         ;
-;    |divider:inst1|          ; 39 (39)     ; 28 (28)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 28 (28)          ; |practica2|divider:inst1          ; work         ;
-+-----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                              ;
++-----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------+--------------+
+; Compilation Hierarchy Node                    ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                 ; Library Name ;
++-----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------+--------------+
+; |practica2                                    ; 22 (0)      ; 14 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 13   ; 0            ; 8 (0)        ; 5 (0)             ; 9 (0)            ; |practica2                                          ; work         ;
+;    |controlMovimiento:inst_controlMovimiento| ; 20 (20)     ; 12 (12)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 4 (4)             ; 8 (8)            ; |practica2|controlMovimiento:inst_controlMovimiento ; work         ;
+;    |sensa_boton:inst_sensa_boton|             ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 1 (1)            ; |practica2|sensa_boton:inst_sensa_boton             ; work         ;
++-----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -561,194 +562,107 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; reset        ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; S[1]         ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; S[0]         ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; boton        ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; reloj        ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 +--------------+----------+---------------+---------------+-----------------------+-----+
 
 
-+------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                               ;
-+------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                            ; Pad To Core Index ; Setting ;
-+------------------------------------------------+-------------------+---------+
-; reset                                          ;                   ;         ;
-;      - controlMovimiento:inst|esiguiente[0]    ; 0                 ; 6       ;
-;      - controlMovimiento:inst|esiguiente[1]    ; 0                 ; 6       ;
-;      - controlMovimiento:inst|esiguiente[2]    ; 0                 ; 6       ;
-;      - controlMovimiento:inst|esiguiente[3]    ; 0                 ; 6       ;
-;      - controlMovimiento:inst|out_epresente[0] ; 0                 ; 6       ;
-;      - controlMovimiento:inst|out_epresente[3] ; 0                 ; 6       ;
-;      - controlMovimiento:inst|out_epresente[2] ; 0                 ; 6       ;
-;      - controlMovimiento:inst|out_epresente[1] ; 0                 ; 6       ;
-;      - controlMovimiento:inst|atras~0          ; 0                 ; 6       ;
-;      - controlMovimiento:inst|adelante~1       ; 0                 ; 6       ;
-; S[1]                                           ;                   ;         ;
-;      - controlMovimiento:inst|adelante~0       ; 1                 ; 6       ;
-;      - controlMovimiento:inst|Mux7~0           ; 1                 ; 6       ;
-;      - controlMovimiento:inst|Mux5~1           ; 1                 ; 6       ;
-;      - controlMovimiento:inst|Mux6~1           ; 1                 ; 6       ;
-; S[0]                                           ;                   ;         ;
-;      - controlMovimiento:inst|adelante~0       ; 1                 ; 6       ;
-;      - controlMovimiento:inst|Mux7~0           ; 1                 ; 6       ;
-;      - controlMovimiento:inst|Mux5~1           ; 1                 ; 6       ;
-;      - controlMovimiento:inst|Mux6~1           ; 1                 ; 6       ;
-; reloj                                          ;                   ;         ;
-+------------------------------------------------+-------------------+---------+
++------------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                                 ;
++------------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                              ; Pad To Core Index ; Setting ;
++------------------------------------------------------------------+-------------------+---------+
+; reset                                                            ;                   ;         ;
+;      - controlMovimiento:inst_controlMovimiento|esiguiente[0]    ; 0                 ; 6       ;
+;      - controlMovimiento:inst_controlMovimiento|esiguiente[1]    ; 0                 ; 6       ;
+;      - controlMovimiento:inst_controlMovimiento|esiguiente[2]    ; 0                 ; 6       ;
+;      - controlMovimiento:inst_controlMovimiento|esiguiente[3]    ; 0                 ; 6       ;
+;      - controlMovimiento:inst_controlMovimiento|out_epresente[0] ; 0                 ; 6       ;
+;      - controlMovimiento:inst_controlMovimiento|out_epresente[3] ; 0                 ; 6       ;
+;      - controlMovimiento:inst_controlMovimiento|out_epresente[2] ; 0                 ; 6       ;
+;      - controlMovimiento:inst_controlMovimiento|out_epresente[1] ; 0                 ; 6       ;
+;      - controlMovimiento:inst_controlMovimiento|atras~0          ; 0                 ; 6       ;
+;      - controlMovimiento:inst_controlMovimiento|adelante~1       ; 0                 ; 6       ;
+; S[1]                                                             ;                   ;         ;
+;      - controlMovimiento:inst_controlMovimiento|adelante~0       ; 0                 ; 6       ;
+;      - controlMovimiento:inst_controlMovimiento|Mux7~0           ; 0                 ; 6       ;
+;      - controlMovimiento:inst_controlMovimiento|Mux5~1           ; 0                 ; 6       ;
+;      - controlMovimiento:inst_controlMovimiento|Mux6~1           ; 0                 ; 6       ;
+; S[0]                                                             ;                   ;         ;
+;      - controlMovimiento:inst_controlMovimiento|adelante~0       ; 1                 ; 6       ;
+;      - controlMovimiento:inst_controlMovimiento|Mux7~0           ; 1                 ; 6       ;
+;      - controlMovimiento:inst_controlMovimiento|Mux5~1           ; 1                 ; 6       ;
+;      - controlMovimiento:inst_controlMovimiento|Mux6~1           ; 1                 ; 6       ;
+; boton                                                            ;                   ;         ;
+;      - sensa_boton:inst_sensa_boton|reloj~0                      ; 0                 ; 6       ;
+;      - sensa_boton:inst_sensa_boton|esiguiente~feeder            ; 0                 ; 6       ;
+; reloj                                                            ;                   ;         ;
++------------------------------------------------------------------+-------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                               ;
-+--------------------------------------+------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; Name                                 ; Location         ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+--------------------------------------+------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; controlMovimiento:inst|atras~0       ; LCCOMB_X27_Y5_N4 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; controlMovimiento:inst|esiguiente[3] ; LCFF_X27_Y5_N21  ; 12      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; divider:inst1|cuenta[25]             ; LCFF_X27_Y10_N23 ; 12      ; Clock                      ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; reloj                                ; PIN_17           ; 28      ; Clock                      ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; reset                                ; PIN_101          ; 10      ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
-+--------------------------------------+------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                  ;
++--------------------------------------------------------+-------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
+; Name                                                   ; Location          ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++--------------------------------------------------------+-------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
+; controlMovimiento:inst_controlMovimiento|atras~0       ; LCCOMB_X26_Y7_N24 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; controlMovimiento:inst_controlMovimiento|esiguiente[3] ; LCFF_X26_Y7_N27   ; 12      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; reloj                                                  ; PIN_17            ; 2       ; Clock                      ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; reset                                                  ; PIN_101           ; 10      ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
+; sensa_boton:inst_sensa_boton|reloj                     ; LCFF_X27_Y7_N7    ; 12      ; Clock                      ; yes    ; Global Clock         ; GCLK4            ; --                        ;
++--------------------------------------------------------+-------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                 ;
-+--------------------------+------------------+---------+----------------------+------------------+---------------------------+
-; Name                     ; Location         ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+--------------------------+------------------+---------+----------------------+------------------+---------------------------+
-; divider:inst1|cuenta[25] ; LCFF_X27_Y10_N23 ; 12      ; Global Clock         ; GCLK4            ; --                        ;
-; reloj                    ; PIN_17           ; 28      ; Global Clock         ; GCLK2            ; --                        ;
-+--------------------------+------------------+---------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                         ;
++------------------------------------+----------------+---------+----------------------+------------------+---------------------------+
+; Name                               ; Location       ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++------------------------------------+----------------+---------+----------------------+------------------+---------------------------+
+; reloj                              ; PIN_17         ; 2       ; Global Clock         ; GCLK2            ; --                        ;
+; sensa_boton:inst_sensa_boton|reloj ; LCFF_X27_Y7_N7 ; 12      ; Global Clock         ; GCLK4            ; --                        ;
++------------------------------------+----------------+---------+----------------------+------------------+---------------------------+
 
 
-+---------------------------------------------------+
-; Non-Global High Fan-Out Signals                   ;
-+-----------------------------------------+---------+
-; Name                                    ; Fan-Out ;
-+-----------------------------------------+---------+
-; controlMovimiento:inst|esiguiente[2]    ; 13      ;
-; controlMovimiento:inst|esiguiente[3]    ; 12      ;
-; controlMovimiento:inst|esiguiente[1]    ; 12      ;
-; controlMovimiento:inst|esiguiente[0]    ; 11      ;
-; reset                                   ; 10      ;
-; S[0]                                    ; 4       ;
-; S[1]                                    ; 4       ;
-; controlMovimiento:inst|atras~0          ; 4       ;
-; divider:inst1|Equal0~8                  ; 2       ;
-; divider:inst1|cuenta[27]                ; 2       ;
-; divider:inst1|cuenta[26]                ; 2       ;
-; divider:inst1|cuenta[0]                 ; 2       ;
-; divider:inst1|cuenta[1]                 ; 2       ;
-; divider:inst1|cuenta[2]                 ; 2       ;
-; divider:inst1|cuenta[3]                 ; 2       ;
-; divider:inst1|cuenta[4]                 ; 2       ;
-; divider:inst1|cuenta[5]                 ; 2       ;
-; divider:inst1|cuenta[6]                 ; 2       ;
-; divider:inst1|cuenta[7]                 ; 2       ;
-; divider:inst1|cuenta[8]                 ; 2       ;
-; divider:inst1|cuenta[9]                 ; 2       ;
-; divider:inst1|cuenta[10]                ; 2       ;
-; divider:inst1|cuenta[11]                ; 2       ;
-; divider:inst1|cuenta[12]                ; 2       ;
-; divider:inst1|cuenta[13]                ; 2       ;
-; divider:inst1|cuenta[14]                ; 2       ;
-; divider:inst1|cuenta[15]                ; 2       ;
-; divider:inst1|cuenta[16]                ; 2       ;
-; divider:inst1|cuenta[17]                ; 2       ;
-; divider:inst1|cuenta[18]                ; 2       ;
-; divider:inst1|cuenta[19]                ; 2       ;
-; divider:inst1|cuenta[20]                ; 2       ;
-; divider:inst1|cuenta[21]                ; 2       ;
-; divider:inst1|cuenta[22]                ; 2       ;
-; divider:inst1|cuenta[23]                ; 2       ;
-; divider:inst1|cuenta[24]                ; 2       ;
-; divider:inst1|cuenta[25]                ; 2       ;
-; controlMovimiento:inst|adelante         ; 2       ;
-; divider:inst1|cuenta~1                  ; 1       ;
-; divider:inst1|cuenta~0                  ; 1       ;
-; divider:inst1|Equal0~7                  ; 1       ;
-; divider:inst1|Equal0~6                  ; 1       ;
-; divider:inst1|Equal0~5                  ; 1       ;
-; divider:inst1|Equal0~4                  ; 1       ;
-; divider:inst1|Equal0~3                  ; 1       ;
-; divider:inst1|Equal0~2                  ; 1       ;
-; divider:inst1|Equal0~1                  ; 1       ;
-; divider:inst1|Equal0~0                  ; 1       ;
-; controlMovimiento:inst|Mux4~0           ; 1       ;
-; controlMovimiento:inst|Mux6~2           ; 1       ;
-; controlMovimiento:inst|Mux6~1           ; 1       ;
-; controlMovimiento:inst|Mux6~0           ; 1       ;
-; controlMovimiento:inst|Mux5~2           ; 1       ;
-; controlMovimiento:inst|Mux5~1           ; 1       ;
-; controlMovimiento:inst|Mux5~0           ; 1       ;
-; controlMovimiento:inst|Mux7~1           ; 1       ;
-; controlMovimiento:inst|Mux7~0           ; 1       ;
-; controlMovimiento:inst|Mux1~0           ; 1       ;
-; controlMovimiento:inst|Mux2~0           ; 1       ;
-; controlMovimiento:inst|adelante~2       ; 1       ;
-; controlMovimiento:inst|adelante~1       ; 1       ;
-; controlMovimiento:inst|adelante~0       ; 1       ;
-; controlMovimiento:inst|Mux0~0           ; 1       ;
-; controlMovimiento:inst|out_epresente[0] ; 1       ;
-; controlMovimiento:inst|out_epresente[1] ; 1       ;
-; controlMovimiento:inst|out_epresente[2] ; 1       ;
-; controlMovimiento:inst|out_epresente[3] ; 1       ;
-; controlMovimiento:inst|giro_izq         ; 1       ;
-; controlMovimiento:inst|atras            ; 1       ;
-; divider:inst1|Add0~54                   ; 1       ;
-; divider:inst1|Add0~53                   ; 1       ;
-; divider:inst1|Add0~52                   ; 1       ;
-; divider:inst1|Add0~51                   ; 1       ;
-; divider:inst1|Add0~50                   ; 1       ;
-; divider:inst1|Add0~49                   ; 1       ;
-; divider:inst1|Add0~48                   ; 1       ;
-; divider:inst1|Add0~47                   ; 1       ;
-; divider:inst1|Add0~46                   ; 1       ;
-; divider:inst1|Add0~45                   ; 1       ;
-; divider:inst1|Add0~44                   ; 1       ;
-; divider:inst1|Add0~43                   ; 1       ;
-; divider:inst1|Add0~42                   ; 1       ;
-; divider:inst1|Add0~41                   ; 1       ;
-; divider:inst1|Add0~40                   ; 1       ;
-; divider:inst1|Add0~39                   ; 1       ;
-; divider:inst1|Add0~38                   ; 1       ;
-; divider:inst1|Add0~37                   ; 1       ;
-; divider:inst1|Add0~36                   ; 1       ;
-; divider:inst1|Add0~35                   ; 1       ;
-; divider:inst1|Add0~34                   ; 1       ;
-; divider:inst1|Add0~33                   ; 1       ;
-; divider:inst1|Add0~32                   ; 1       ;
-; divider:inst1|Add0~31                   ; 1       ;
-; divider:inst1|Add0~30                   ; 1       ;
-; divider:inst1|Add0~29                   ; 1       ;
-; divider:inst1|Add0~28                   ; 1       ;
-; divider:inst1|Add0~27                   ; 1       ;
-; divider:inst1|Add0~26                   ; 1       ;
-; divider:inst1|Add0~25                   ; 1       ;
-; divider:inst1|Add0~24                   ; 1       ;
-; divider:inst1|Add0~23                   ; 1       ;
-; divider:inst1|Add0~22                   ; 1       ;
-; divider:inst1|Add0~21                   ; 1       ;
-; divider:inst1|Add0~20                   ; 1       ;
-; divider:inst1|Add0~19                   ; 1       ;
-; divider:inst1|Add0~18                   ; 1       ;
-; divider:inst1|Add0~17                   ; 1       ;
-; divider:inst1|Add0~16                   ; 1       ;
-; divider:inst1|Add0~15                   ; 1       ;
-; divider:inst1|Add0~14                   ; 1       ;
-; divider:inst1|Add0~13                   ; 1       ;
-; divider:inst1|Add0~12                   ; 1       ;
-; divider:inst1|Add0~11                   ; 1       ;
-; divider:inst1|Add0~10                   ; 1       ;
-; divider:inst1|Add0~9                    ; 1       ;
-; divider:inst1|Add0~8                    ; 1       ;
-; divider:inst1|Add0~7                    ; 1       ;
-; divider:inst1|Add0~6                    ; 1       ;
-; divider:inst1|Add0~5                    ; 1       ;
-; divider:inst1|Add0~4                    ; 1       ;
-; divider:inst1|Add0~3                    ; 1       ;
-; divider:inst1|Add0~2                    ; 1       ;
-; divider:inst1|Add0~1                    ; 1       ;
-; divider:inst1|Add0~0                    ; 1       ;
-; controlMovimiento:inst|giro_der         ; 1       ;
-+-----------------------------------------+---------+
++---------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                     ;
++-----------------------------------------------------------+---------+
+; Name                                                      ; Fan-Out ;
++-----------------------------------------------------------+---------+
+; controlMovimiento:inst_controlMovimiento|esiguiente[2]    ; 13      ;
+; controlMovimiento:inst_controlMovimiento|esiguiente[3]    ; 12      ;
+; controlMovimiento:inst_controlMovimiento|esiguiente[1]    ; 12      ;
+; controlMovimiento:inst_controlMovimiento|esiguiente[0]    ; 11      ;
+; reset                                                     ; 10      ;
+; S[0]                                                      ; 4       ;
+; S[1]                                                      ; 4       ;
+; controlMovimiento:inst_controlMovimiento|atras~0          ; 4       ;
+; boton                                                     ; 2       ;
+; controlMovimiento:inst_controlMovimiento|adelante         ; 2       ;
+; sensa_boton:inst_sensa_boton|reloj~0                      ; 1       ;
+; sensa_boton:inst_sensa_boton|esiguiente                   ; 1       ;
+; controlMovimiento:inst_controlMovimiento|Mux4~0           ; 1       ;
+; controlMovimiento:inst_controlMovimiento|Mux6~2           ; 1       ;
+; controlMovimiento:inst_controlMovimiento|Mux6~1           ; 1       ;
+; controlMovimiento:inst_controlMovimiento|Mux6~0           ; 1       ;
+; controlMovimiento:inst_controlMovimiento|Mux5~2           ; 1       ;
+; controlMovimiento:inst_controlMovimiento|Mux5~1           ; 1       ;
+; controlMovimiento:inst_controlMovimiento|Mux5~0           ; 1       ;
+; controlMovimiento:inst_controlMovimiento|Mux7~1           ; 1       ;
+; controlMovimiento:inst_controlMovimiento|Mux7~0           ; 1       ;
+; controlMovimiento:inst_controlMovimiento|Mux1~0           ; 1       ;
+; controlMovimiento:inst_controlMovimiento|Mux2~0           ; 1       ;
+; controlMovimiento:inst_controlMovimiento|adelante~2       ; 1       ;
+; controlMovimiento:inst_controlMovimiento|adelante~1       ; 1       ;
+; controlMovimiento:inst_controlMovimiento|adelante~0       ; 1       ;
+; controlMovimiento:inst_controlMovimiento|Mux0~0           ; 1       ;
+; controlMovimiento:inst_controlMovimiento|out_epresente[0] ; 1       ;
+; controlMovimiento:inst_controlMovimiento|out_epresente[1] ; 1       ;
+; controlMovimiento:inst_controlMovimiento|out_epresente[2] ; 1       ;
+; controlMovimiento:inst_controlMovimiento|out_epresente[3] ; 1       ;
+; controlMovimiento:inst_controlMovimiento|giro_izq         ; 1       ;
+; controlMovimiento:inst_controlMovimiento|atras            ; 1       ;
+; controlMovimiento:inst_controlMovimiento|giro_der         ; 1       ;
++-----------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -756,48 +670,48 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-----------------------+
 ; Other Routing Resource Type ; Usage                 ;
 +-----------------------------+-----------------------+
-; Block interconnects         ; 42 / 15,666 ( < 1 % ) ;
+; Block interconnects         ; 23 / 15,666 ( < 1 % ) ;
 ; C16 interconnects           ; 0 / 812 ( 0 % )       ;
-; C4 interconnects            ; 22 / 11,424 ( < 1 % ) ;
-; Direct links                ; 16 / 15,666 ( < 1 % ) ;
+; C4 interconnects            ; 16 / 11,424 ( < 1 % ) ;
+; Direct links                ; 10 / 15,666 ( < 1 % ) ;
 ; Global clocks               ; 2 / 8 ( 25 % )        ;
-; Local interconnects         ; 44 / 4,608 ( < 1 % )  ;
+; Local interconnects         ; 12 / 4,608 ( < 1 % )  ;
 ; R24 interconnects           ; 0 / 652 ( 0 % )       ;
-; R4 interconnects            ; 15 / 13,328 ( < 1 % ) ;
+; R4 interconnects            ; 11 / 13,328 ( < 1 % ) ;
 +-----------------------------+-----------------------+
 
 
-+---------------------------------------------------------------------------+
-; LAB Logic Elements                                                        ;
-+---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 11.80) ; Number of LABs  (Total = 5) ;
-+---------------------------------------------+-----------------------------+
-; 1                                           ; 0                           ;
-; 2                                           ; 0                           ;
-; 3                                           ; 0                           ;
-; 4                                           ; 1                           ;
-; 5                                           ; 0                           ;
-; 6                                           ; 0                           ;
-; 7                                           ; 1                           ;
-; 8                                           ; 0                           ;
-; 9                                           ; 0                           ;
-; 10                                          ; 0                           ;
-; 11                                          ; 0                           ;
-; 12                                          ; 0                           ;
-; 13                                          ; 0                           ;
-; 14                                          ; 0                           ;
-; 15                                          ; 0                           ;
-; 16                                          ; 3                           ;
-+---------------------------------------------+-----------------------------+
++--------------------------------------------------------------------------+
+; LAB Logic Elements                                                       ;
++--------------------------------------------+-----------------------------+
+; Number of Logic Elements  (Average = 7.33) ; Number of LABs  (Total = 3) ;
++--------------------------------------------+-----------------------------+
+; 1                                          ; 0                           ;
+; 2                                          ; 1                           ;
+; 3                                          ; 0                           ;
+; 4                                          ; 1                           ;
+; 5                                          ; 0                           ;
+; 6                                          ; 0                           ;
+; 7                                          ; 0                           ;
+; 8                                          ; 0                           ;
+; 9                                          ; 0                           ;
+; 10                                         ; 0                           ;
+; 11                                         ; 0                           ;
+; 12                                         ; 0                           ;
+; 13                                         ; 0                           ;
+; 14                                         ; 0                           ;
+; 15                                         ; 0                           ;
+; 16                                         ; 1                           ;
++--------------------------------------------+-----------------------------+
 
 
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 1.40) ; Number of LABs  (Total = 5) ;
+; LAB-wide Signals  (Average = 1.67) ; Number of LABs  (Total = 3) ;
 +------------------------------------+-----------------------------+
 ; 1 Async. clear                     ; 1                           ;
-; 1 Clock                            ; 5                           ;
+; 1 Clock                            ; 3                           ;
 ; 1 Clock enable                     ; 1                           ;
 +------------------------------------+-----------------------------+
 
@@ -805,18 +719,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 19.60) ; Number of LABs  (Total = 5) ;
+; Number of Signals Sourced  (Average = 11.00) ; Number of LABs  (Total = 3) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 0                           ;
 ; 2                                            ; 0                           ;
 ; 3                                            ; 0                           ;
-; 4                                            ; 0                           ;
-; 5                                            ; 0                           ;
+; 4                                            ; 1                           ;
+; 5                                            ; 1                           ;
 ; 6                                            ; 0                           ;
-; 7                                            ; 1                           ;
+; 7                                            ; 0                           ;
 ; 8                                            ; 0                           ;
-; 9                                            ; 1                           ;
+; 9                                            ; 0                           ;
 ; 10                                           ; 0                           ;
 ; 11                                           ; 0                           ;
 ; 12                                           ; 0                           ;
@@ -832,57 +746,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 22                                           ; 0                           ;
 ; 23                                           ; 0                           ;
 ; 24                                           ; 1                           ;
-; 25                                           ; 0                           ;
-; 26                                           ; 0                           ;
-; 27                                           ; 0                           ;
-; 28                                           ; 0                           ;
-; 29                                           ; 2                           ;
 +----------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 6.40) ; Number of LABs  (Total = 5) ;
+; Number of Signals Sourced Out  (Average = 4.33) ; Number of LABs  (Total = 3) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
-; 1                                               ; 0                           ;
-; 2                                               ; 1                           ;
+; 1                                               ; 1                           ;
+; 2                                               ; 0                           ;
 ; 3                                               ; 0                           ;
 ; 4                                               ; 1                           ;
 ; 5                                               ; 0                           ;
 ; 6                                               ; 0                           ;
 ; 7                                               ; 0                           ;
-; 8                                               ; 2                           ;
-; 9                                               ; 0                           ;
-; 10                                              ; 1                           ;
+; 8                                               ; 1                           ;
 +-------------------------------------------------+-----------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 6.60) ; Number of LABs  (Total = 5) ;
+; Number of Distinct Inputs  (Average = 4.00) ; Number of LABs  (Total = 3) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
 ; 2                                           ; 1                           ;
-; 3                                           ; 1                           ;
+; 3                                           ; 0                           ;
 ; 4                                           ; 1                           ;
 ; 5                                           ; 0                           ;
 ; 6                                           ; 1                           ;
-; 7                                           ; 0                           ;
-; 8                                           ; 0                           ;
-; 9                                           ; 0                           ;
-; 10                                          ; 0                           ;
-; 11                                          ; 0                           ;
-; 12                                          ; 0                           ;
-; 13                                          ; 0                           ;
-; 14                                          ; 0                           ;
-; 15                                          ; 0                           ;
-; 16                                          ; 0                           ;
-; 17                                          ; 0                           ;
-; 18                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -937,11 +832,8 @@ Info (332144): No user constrained base clocks found in the design
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176353): Automatically promoted node reloj (placed in PIN 17 (CLK0, LVDSCLK0p, Input))
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
-Info (176353): Automatically promoted node divider:inst1|cuenta[25] 
+Info (176353): Automatically promoted node sensa_boton:inst_sensa_boton|reloj 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node divider:inst1|Add0~50
-        Info (176357): Destination node divider:inst1|Equal0~7
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
@@ -957,7 +849,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.28 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.20 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 8 output pins without output pin load capacitance assignment
     Info (306007): Pin "atras" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -975,10 +867,10 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file /home/penserbjorne/Proyectos/clase-arquitectura-computadoras-2020-1/pactica2/output_files/practica2.fit.smsg
 Info: Quartus II 32-bit Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 402 megabytes
-    Info: Processing ended: Sat Sep 21 22:36:41 2019
+    Info: Peak virtual memory: 398 megabytes
+    Info: Processing ended: Sat Sep 21 23:36:52 2019
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +----------------------------+

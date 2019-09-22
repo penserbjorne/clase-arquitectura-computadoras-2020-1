@@ -1,0 +1,13 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity sensa_boton is
+	Port(
+		boton : in STD_LOGIC;
+		clk : in STD_LOGIC;
+		reloj : out STD_LOGIC;
+		epresente: buffer STD_LOGIC
+	);
+end sensa_boton;

@@ -6,6 +6,7 @@
 - reset         =>  pin 101 => Se activa en bajo
 - izquierda     =>  Pin 99
 - derecha       =>  Pin 96
+- boton         =>  Pin 104
 
 ## salidas
 
