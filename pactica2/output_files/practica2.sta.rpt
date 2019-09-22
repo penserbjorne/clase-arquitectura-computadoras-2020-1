@@ -1,0 +1,1462 @@
+TimeQuest Timing Analyzer report for practica2
+Sat Sep 21 22:36:45 2019
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'reloj'
+ 12. Slow Model Setup: 'divider:inst1|cuenta[25]'
+ 13. Slow Model Hold: 'reloj'
+ 14. Slow Model Hold: 'divider:inst1|cuenta[25]'
+ 15. Slow Model Minimum Pulse Width: 'reloj'
+ 16. Slow Model Minimum Pulse Width: 'divider:inst1|cuenta[25]'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Fast Model Setup: 'reloj'
+ 27. Fast Model Setup: 'divider:inst1|cuenta[25]'
+ 28. Fast Model Hold: 'reloj'
+ 29. Fast Model Hold: 'divider:inst1|cuenta[25]'
+ 30. Fast Model Minimum Pulse Width: 'reloj'
+ 31. Fast Model Minimum Pulse Width: 'divider:inst1|cuenta[25]'
+ 32. Setup Times
+ 33. Hold Times
+ 34. Clock to Output Times
+ 35. Minimum Clock to Output Times
+ 36. Multicorner Timing Analysis Summary
+ 37. Setup Times
+ 38. Hold Times
+ 39. Clock to Output Times
+ 40. Minimum Clock to Output Times
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; practica2                                                         ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C5T144C8                                                       ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                             ;
++--------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------+
+; Clock Name               ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                      ;
++--------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------+
+; divider:inst1|cuenta[25] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divider:inst1|cuenta[25] } ;
+; reloj                    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { reloj }                    ;
++--------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                         ;
++------------+-----------------+--------------------------+-------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name               ; Note                                                  ;
++------------+-----------------+--------------------------+-------------------------------------------------------+
+; 170.01 MHz ; 170.01 MHz      ; reloj                    ;                                                       ;
+; 406.5 MHz  ; 402.58 MHz      ; divider:inst1|cuenta[25] ; limit due to high minimum pulse width violation (tch) ;
++------------+-----------------+--------------------------+-------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------------------------+
+; Slow Model Setup Summary                          ;
++--------------------------+--------+---------------+
+; Clock                    ; Slack  ; End Point TNS ;
++--------------------------+--------+---------------+
+; reloj                    ; -4.882 ; -81.253       ;
+; divider:inst1|cuenta[25] ; -1.460 ; -11.490       ;
++--------------------------+--------+---------------+
+
+
++---------------------------------------------------+
+; Slow Model Hold Summary                           ;
++--------------------------+--------+---------------+
+; Clock                    ; Slack  ; End Point TNS ;
++--------------------------+--------+---------------+
+; reloj                    ; -1.875 ; -4.548        ;
+; divider:inst1|cuenta[25] ; 0.499  ; 0.000         ;
++--------------------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary            ;
++--------------------------+--------+---------------+
+; Clock                    ; Slack  ; End Point TNS ;
++--------------------------+--------+---------------+
+; reloj                    ; -1.941 ; -43.493       ;
+; divider:inst1|cuenta[25] ; -0.742 ; -17.808       ;
++--------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'reloj'                                                                                                          ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; -4.882 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 5.922      ;
+; -4.211 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 5.247      ;
+; -4.098 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 5.138      ;
+; -4.071 ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 5.107      ;
+; -4.039 ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 5.075      ;
+; -3.949 ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.985      ;
+; -3.926 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[25] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 4.966      ;
+; -3.840 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[24] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 4.880      ;
+; -3.836 ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.872      ;
+; -3.815 ; divider:inst1|cuenta[5]  ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.851      ;
+; -3.754 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[23] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 4.794      ;
+; -3.684 ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.720      ;
+; -3.679 ; divider:inst1|cuenta[6]  ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.715      ;
+; -3.668 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[22] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 4.708      ;
+; -3.604 ; divider:inst1|cuenta[6]  ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.640      ;
+; -3.564 ; divider:inst1|cuenta[7]  ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.600      ;
+; -3.561 ; divider:inst1|cuenta[7]  ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.597      ;
+; -3.509 ; divider:inst1|cuenta[8]  ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.545      ;
+; -3.505 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.541      ;
+; -3.503 ; divider:inst1|cuenta[10] ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.539      ;
+; -3.500 ; divider:inst1|cuenta[10] ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.536      ;
+; -3.478 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[21] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 4.518      ;
+; -3.475 ; divider:inst1|cuenta[13] ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.511      ;
+; -3.472 ; divider:inst1|cuenta[13] ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.508      ;
+; -3.463 ; divider:inst1|cuenta[11] ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.499      ;
+; -3.460 ; divider:inst1|cuenta[11] ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.496      ;
+; -3.427 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.463      ;
+; -3.401 ; divider:inst1|cuenta[5]  ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.437      ;
+; -3.392 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[20] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 4.432      ;
+; -3.365 ; divider:inst1|cuenta[9]  ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.401      ;
+; -3.319 ; divider:inst1|cuenta[8]  ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.355      ;
+; -3.306 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[19] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 4.346      ;
+; -3.287 ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.323      ;
+; -3.255 ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.291      ;
+; -3.255 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[25] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.291      ;
+; -3.227 ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.263      ;
+; -3.220 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[18] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 4.260      ;
+; -3.169 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[24] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.205      ;
+; -3.165 ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.201      ;
+; -3.134 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[17] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 4.174      ;
+; -3.131 ; divider:inst1|cuenta[9]  ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.167      ;
+; -3.115 ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[25] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.151      ;
+; -3.111 ; divider:inst1|cuenta[12] ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.147      ;
+; -3.083 ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[25] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.119      ;
+; -3.083 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[23] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.119      ;
+; -3.048 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[16] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 4.088      ;
+; -3.031 ; divider:inst1|cuenta[5]  ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.067      ;
+; -3.029 ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[24] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.065      ;
+; -2.997 ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[24] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.033      ;
+; -2.997 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[22] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.033      ;
+; -2.993 ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[25] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 4.029      ;
+; -2.962 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[15] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 4.002      ;
+; -2.962 ; divider:inst1|cuenta[12] ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.998      ;
+; -2.943 ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[23] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.979      ;
+; -2.927 ; divider:inst1|cuenta[15] ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; 0.000      ; 3.967      ;
+; -2.924 ; divider:inst1|cuenta[15] ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 3.964      ;
+; -2.911 ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[23] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.947      ;
+; -2.907 ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[24] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.943      ;
+; -2.897 ; divider:inst1|cuenta[14] ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; 0.000      ; 3.937      ;
+; -2.895 ; divider:inst1|cuenta[6]  ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.931      ;
+; -2.894 ; divider:inst1|cuenta[14] ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 3.934      ;
+; -2.876 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[14] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 3.916      ;
+; -2.859 ; divider:inst1|cuenta[5]  ; divider:inst1|cuenta[25] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.895      ;
+; -2.857 ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[22] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.893      ;
+; -2.825 ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[22] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.861      ;
+; -2.821 ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[23] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.857      ;
+; -2.807 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[21] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.843      ;
+; -2.799 ; divider:inst1|cuenta[20] ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; 0.000      ; 3.839      ;
+; -2.796 ; divider:inst1|cuenta[20] ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 3.836      ;
+; -2.773 ; divider:inst1|cuenta[5]  ; divider:inst1|cuenta[24] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.809      ;
+; -2.770 ; divider:inst1|cuenta[21] ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; 0.000      ; 3.810      ;
+; -2.767 ; divider:inst1|cuenta[21] ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 3.807      ;
+; -2.752 ; divider:inst1|cuenta[7]  ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.788      ;
+; -2.741 ; divider:inst1|cuenta[17] ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; 0.000      ; 3.781      ;
+; -2.738 ; divider:inst1|cuenta[17] ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 3.778      ;
+; -2.735 ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[22] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.771      ;
+; -2.725 ; divider:inst1|cuenta[8]  ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.761      ;
+; -2.723 ; divider:inst1|cuenta[6]  ; divider:inst1|cuenta[25] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.759      ;
+; -2.721 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[20] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.757      ;
+; -2.699 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; 0.000      ; 3.739      ;
+; -2.697 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[13] ; reloj        ; reloj       ; 1.000        ; 0.004      ; 3.741      ;
+; -2.687 ; divider:inst1|cuenta[5]  ; divider:inst1|cuenta[23] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.723      ;
+; -2.674 ; divider:inst1|cuenta[16] ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 3.714      ;
+; -2.667 ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[21] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.703      ;
+; -2.637 ; divider:inst1|cuenta[6]  ; divider:inst1|cuenta[24] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.673      ;
+; -2.635 ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[21] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.671      ;
+; -2.635 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[19] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.671      ;
+; -2.617 ; divider:inst1|cuenta[22] ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; 0.000      ; 3.657      ;
+; -2.614 ; divider:inst1|cuenta[22] ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 3.654      ;
+; -2.611 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[12] ; reloj        ; reloj       ; 1.000        ; 0.004      ; 3.655      ;
+; -2.601 ; divider:inst1|cuenta[5]  ; divider:inst1|cuenta[22] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.637      ;
+; -2.581 ; divider:inst1|cuenta[9]  ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.617      ;
+; -2.581 ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[20] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.617      ;
+; -2.580 ; divider:inst1|cuenta[7]  ; divider:inst1|cuenta[25] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.616      ;
+; -2.553 ; divider:inst1|cuenta[10] ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.589      ;
+; -2.553 ; divider:inst1|cuenta[8]  ; divider:inst1|cuenta[25] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.589      ;
+; -2.551 ; divider:inst1|cuenta[6]  ; divider:inst1|cuenta[23] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.587      ;
+; -2.549 ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[20] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.585      ;
+; -2.549 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[18] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.585      ;
+; -2.545 ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[21] ; reloj        ; reloj       ; 1.000        ; -0.004     ; 3.581      ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'divider:inst1|cuenta[25]'                                                                                                                                           ;
++--------+--------------------------------------+-----------------------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node                                 ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+-----------------------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; -1.460 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|adelante         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 2.500      ;
+; -1.451 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|esiguiente[2]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 2.491      ;
+; -1.329 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|giro_der         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 2.369      ;
+; -1.329 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|atras            ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 2.369      ;
+; -1.329 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|giro_izq         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 2.369      ;
+; -1.304 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|esiguiente[1]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 2.344      ;
+; -1.241 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|esiguiente[1]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 2.281      ;
+; -1.216 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|adelante         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 2.256      ;
+; -1.137 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|adelante         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 2.177      ;
+; -1.117 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|giro_der         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 2.157      ;
+; -1.117 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|atras            ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 2.157      ;
+; -1.117 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|giro_izq         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 2.157      ;
+; -1.098 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|esiguiente[0]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 2.138      ;
+; -1.042 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|esiguiente[1]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 2.082      ;
+; -1.041 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|esiguiente[2]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 2.081      ;
+; -0.825 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|esiguiente[3]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 1.865      ;
+; -0.823 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|esiguiente[2]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 1.863      ;
+; -0.793 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|esiguiente[1]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 1.833      ;
+; -0.769 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|atras            ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 1.809      ;
+; -0.768 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|giro_izq         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 1.808      ;
+; -0.638 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|esiguiente[0]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 1.678      ;
+; -0.617 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|giro_der         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 1.657      ;
+; -0.615 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|esiguiente[2]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 1.655      ;
+; -0.610 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|adelante         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 1.650      ;
+; -0.551 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|esiguiente[0]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 1.591      ;
+; -0.519 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|atras            ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 1.559      ;
+; -0.519 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|giro_izq         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 1.559      ;
+; -0.517 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|giro_der         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 1.557      ;
+; -0.485 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|esiguiente[3]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 1.525      ;
+; -0.472 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|out_epresente[1] ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 1.512      ;
+; -0.331 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|out_epresente[2] ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 1.371      ;
+; -0.325 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|out_epresente[3] ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 1.365      ;
+; -0.237 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|out_epresente[0] ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 1.277      ;
+; -0.040 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|esiguiente[3]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 1.080      ;
+; 0.235  ; controlMovimiento:inst|adelante      ; controlMovimiento:inst|adelante         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.805      ;
+; 0.235  ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|esiguiente[0]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.805      ;
+; 0.235  ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|esiguiente[3]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.805      ;
++--------+--------------------------------------+-----------------------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'reloj'                                                                                                                       ;
++--------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+; -1.875 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; reloj       ; 0.000        ; 2.762      ; 1.497      ;
+; -1.375 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; reloj       ; -0.500       ; 2.762      ; 1.497      ;
+; -1.310 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[27] ; divider:inst1|cuenta[25] ; reloj       ; 0.000        ; 2.762      ; 2.062      ;
+; -0.810 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[27] ; divider:inst1|cuenta[25] ; reloj       ; -0.500       ; 2.762      ; 2.062      ;
+; -0.683 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[26] ; divider:inst1|cuenta[25] ; reloj       ; 0.000        ; 2.762      ; 2.689      ;
+; -0.680 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[25] ; reloj       ; 0.000        ; 2.762      ; 2.692      ;
+; -0.183 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[26] ; divider:inst1|cuenta[25] ; reloj       ; -0.500       ; 2.762      ; 2.689      ;
+; -0.180 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[25] ; reloj       ; -0.500       ; 2.762      ; 2.692      ;
+; 0.744  ; divider:inst1|cuenta[27] ; divider:inst1|cuenta[27] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.050      ;
+; 1.166  ; divider:inst1|cuenta[14] ; divider:inst1|cuenta[14] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.472      ;
+; 1.173  ; divider:inst1|cuenta[5]  ; divider:inst1|cuenta[5]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.479      ;
+; 1.176  ; divider:inst1|cuenta[7]  ; divider:inst1|cuenta[7]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.482      ;
+; 1.177  ; divider:inst1|cuenta[9]  ; divider:inst1|cuenta[9]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177  ; divider:inst1|cuenta[11] ; divider:inst1|cuenta[11] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177  ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[2]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177  ; divider:inst1|cuenta[21] ; divider:inst1|cuenta[21] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.483      ;
+; 1.181  ; divider:inst1|cuenta[12] ; divider:inst1|cuenta[12] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.487      ;
+; 1.181  ; divider:inst1|cuenta[16] ; divider:inst1|cuenta[16] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.487      ;
+; 1.181  ; divider:inst1|cuenta[18] ; divider:inst1|cuenta[18] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.487      ;
+; 1.182  ; divider:inst1|cuenta[13] ; divider:inst1|cuenta[13] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.488      ;
+; 1.182  ; divider:inst1|cuenta[23] ; divider:inst1|cuenta[23] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.488      ;
+; 1.185  ; divider:inst1|cuenta[15] ; divider:inst1|cuenta[15] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.491      ;
+; 1.225  ; divider:inst1|cuenta[24] ; divider:inst1|cuenta[24] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.531      ;
+; 1.225  ; divider:inst1|cuenta[22] ; divider:inst1|cuenta[22] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.531      ;
+; 1.225  ; divider:inst1|cuenta[20] ; divider:inst1|cuenta[20] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.531      ;
+; 1.226  ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[4]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.532      ;
+; 1.229  ; divider:inst1|cuenta[17] ; divider:inst1|cuenta[17] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.535      ;
+; 1.230  ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[3]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.536      ;
+; 1.230  ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[1]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.536      ;
+; 1.230  ; divider:inst1|cuenta[19] ; divider:inst1|cuenta[19] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.536      ;
+; 1.232  ; divider:inst1|cuenta[6]  ; divider:inst1|cuenta[6]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.538      ;
+; 1.234  ; divider:inst1|cuenta[8]  ; divider:inst1|cuenta[8]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.540      ;
+; 1.234  ; divider:inst1|cuenta[10] ; divider:inst1|cuenta[10] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.540      ;
+; 1.645  ; divider:inst1|cuenta[14] ; divider:inst1|cuenta[15] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.951      ;
+; 1.655  ; divider:inst1|cuenta[7]  ; divider:inst1|cuenta[8]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.961      ;
+; 1.656  ; divider:inst1|cuenta[11] ; divider:inst1|cuenta[12] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.962      ;
+; 1.656  ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[3]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.962      ;
+; 1.656  ; divider:inst1|cuenta[9]  ; divider:inst1|cuenta[10] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.962      ;
+; 1.660  ; divider:inst1|cuenta[12] ; divider:inst1|cuenta[13] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.966      ;
+; 1.660  ; divider:inst1|cuenta[16] ; divider:inst1|cuenta[17] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.966      ;
+; 1.660  ; divider:inst1|cuenta[18] ; divider:inst1|cuenta[19] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.966      ;
+; 1.661  ; divider:inst1|cuenta[23] ; divider:inst1|cuenta[24] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.967      ;
+; 1.664  ; divider:inst1|cuenta[15] ; divider:inst1|cuenta[16] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 1.970      ;
+; 1.705  ; divider:inst1|cuenta[24] ; divider:inst1|cuenta[25] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.011      ;
+; 1.705  ; divider:inst1|cuenta[20] ; divider:inst1|cuenta[21] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.011      ;
+; 1.705  ; divider:inst1|cuenta[22] ; divider:inst1|cuenta[23] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.011      ;
+; 1.706  ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[5]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.012      ;
+; 1.709  ; divider:inst1|cuenta[17] ; divider:inst1|cuenta[18] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.015      ;
+; 1.710  ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[2]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.016      ;
+; 1.710  ; divider:inst1|cuenta[19] ; divider:inst1|cuenta[20] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.016      ;
+; 1.710  ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[4]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.016      ;
+; 1.712  ; divider:inst1|cuenta[6]  ; divider:inst1|cuenta[7]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.018      ;
+; 1.714  ; divider:inst1|cuenta[8]  ; divider:inst1|cuenta[9]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.020      ;
+; 1.714  ; divider:inst1|cuenta[10] ; divider:inst1|cuenta[11] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.020      ;
+; 1.731  ; divider:inst1|cuenta[14] ; divider:inst1|cuenta[16] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.037      ;
+; 1.741  ; divider:inst1|cuenta[7]  ; divider:inst1|cuenta[9]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.047      ;
+; 1.742  ; divider:inst1|cuenta[11] ; divider:inst1|cuenta[13] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.048      ;
+; 1.742  ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[4]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.048      ;
+; 1.742  ; divider:inst1|cuenta[9]  ; divider:inst1|cuenta[11] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.048      ;
+; 1.746  ; divider:inst1|cuenta[16] ; divider:inst1|cuenta[18] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.052      ;
+; 1.746  ; divider:inst1|cuenta[18] ; divider:inst1|cuenta[20] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.052      ;
+; 1.747  ; divider:inst1|cuenta[23] ; divider:inst1|cuenta[25] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.053      ;
+; 1.750  ; divider:inst1|cuenta[15] ; divider:inst1|cuenta[17] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.056      ;
+; 1.762  ; divider:inst1|cuenta[5]  ; divider:inst1|cuenta[6]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.068      ;
+; 1.766  ; divider:inst1|cuenta[21] ; divider:inst1|cuenta[22] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.072      ;
+; 1.774  ; divider:inst1|cuenta[13] ; divider:inst1|cuenta[14] ; reloj                    ; reloj       ; 0.000        ; -0.004     ; 2.076      ;
+; 1.791  ; divider:inst1|cuenta[22] ; divider:inst1|cuenta[24] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.097      ;
+; 1.795  ; divider:inst1|cuenta[17] ; divider:inst1|cuenta[19] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.101      ;
+; 1.796  ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[3]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.102      ;
+; 1.796  ; divider:inst1|cuenta[19] ; divider:inst1|cuenta[21] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.102      ;
+; 1.796  ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[5]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.102      ;
+; 1.798  ; divider:inst1|cuenta[6]  ; divider:inst1|cuenta[8]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.104      ;
+; 1.800  ; divider:inst1|cuenta[10] ; divider:inst1|cuenta[12] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.106      ;
+; 1.800  ; divider:inst1|cuenta[8]  ; divider:inst1|cuenta[10] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.106      ;
+; 1.817  ; divider:inst1|cuenta[14] ; divider:inst1|cuenta[17] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.123      ;
+; 1.827  ; divider:inst1|cuenta[7]  ; divider:inst1|cuenta[10] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.133      ;
+; 1.828  ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[5]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.134      ;
+; 1.828  ; divider:inst1|cuenta[9]  ; divider:inst1|cuenta[12] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.134      ;
+; 1.832  ; divider:inst1|cuenta[16] ; divider:inst1|cuenta[19] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.138      ;
+; 1.832  ; divider:inst1|cuenta[18] ; divider:inst1|cuenta[21] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.138      ;
+; 1.836  ; divider:inst1|cuenta[15] ; divider:inst1|cuenta[18] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.142      ;
+; 1.839  ; divider:inst1|cuenta[12] ; divider:inst1|cuenta[14] ; reloj                    ; reloj       ; 0.000        ; -0.004     ; 2.141      ;
+; 1.848  ; divider:inst1|cuenta[5]  ; divider:inst1|cuenta[7]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.154      ;
+; 1.852  ; divider:inst1|cuenta[21] ; divider:inst1|cuenta[23] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.158      ;
+; 1.860  ; divider:inst1|cuenta[13] ; divider:inst1|cuenta[15] ; reloj                    ; reloj       ; 0.000        ; -0.004     ; 2.162      ;
+; 1.877  ; divider:inst1|cuenta[24] ; divider:inst1|cuenta[27] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.183      ;
+; 1.877  ; divider:inst1|cuenta[22] ; divider:inst1|cuenta[25] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.183      ;
+; 1.881  ; divider:inst1|cuenta[17] ; divider:inst1|cuenta[20] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.187      ;
+; 1.882  ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[4]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.188      ;
+; 1.884  ; divider:inst1|cuenta[6]  ; divider:inst1|cuenta[9]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.190      ;
+; 1.886  ; divider:inst1|cuenta[10] ; divider:inst1|cuenta[13] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.192      ;
+; 1.886  ; divider:inst1|cuenta[8]  ; divider:inst1|cuenta[11] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.192      ;
+; 1.895  ; divider:inst1|cuenta[20] ; divider:inst1|cuenta[22] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.201      ;
+; 1.896  ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[6]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.202      ;
+; 1.903  ; divider:inst1|cuenta[14] ; divider:inst1|cuenta[18] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.209      ;
+; 1.913  ; divider:inst1|cuenta[7]  ; divider:inst1|cuenta[11] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.219      ;
+; 1.914  ; divider:inst1|cuenta[9]  ; divider:inst1|cuenta[13] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.220      ;
+; 1.916  ; divider:inst1|cuenta[26] ; divider:inst1|cuenta[27] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.222      ;
+; 1.918  ; divider:inst1|cuenta[16] ; divider:inst1|cuenta[20] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.224      ;
+; 1.919  ; divider:inst1|cuenta[23] ; divider:inst1|cuenta[27] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 2.225      ;
++--------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'divider:inst1|cuenta[25]'                                                                                                                                           ;
++-------+--------------------------------------+-----------------------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                                 ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+-----------------------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.499 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|esiguiente[1]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|esiguiente[0]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|esiguiente[3]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|esiguiente[2]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; controlMovimiento:inst|adelante      ; controlMovimiento:inst|adelante         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.805      ;
+; 0.774 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|esiguiente[3]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.080      ;
+; 0.971 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|out_epresente[0] ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.277      ;
+; 1.059 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|out_epresente[3] ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.365      ;
+; 1.065 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|out_epresente[2] ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.371      ;
+; 1.111 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|giro_der         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.417      ;
+; 1.206 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|out_epresente[1] ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.512      ;
+; 1.219 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|esiguiente[3]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.525      ;
+; 1.233 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|giro_der         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.539      ;
+; 1.242 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|esiguiente[2]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.548      ;
+; 1.253 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|atras            ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.559      ;
+; 1.253 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|giro_izq         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.559      ;
+; 1.275 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|giro_der         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.581      ;
+; 1.285 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|esiguiente[0]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.591      ;
+; 1.344 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|adelante         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.650      ;
+; 1.345 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|esiguiente[1]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.651      ;
+; 1.351 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|giro_der         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.657      ;
+; 1.369 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|atras            ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.675      ;
+; 1.369 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|giro_izq         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.675      ;
+; 1.372 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|esiguiente[0]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.678      ;
+; 1.502 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|giro_izq         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.808      ;
+; 1.503 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|atras            ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.809      ;
+; 1.505 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|adelante         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.811      ;
+; 1.531 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|atras            ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.837      ;
+; 1.531 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|giro_izq         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.837      ;
+; 1.534 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|esiguiente[0]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.840      ;
+; 1.557 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|esiguiente[1]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.863      ;
+; 1.559 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|esiguiente[3]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 1.865      ;
+; 1.738 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|adelante         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 2.044      ;
+; 1.750 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|esiguiente[2]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 2.056      ;
+; 1.771 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|esiguiente[1]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 2.077      ;
+; 1.871 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|adelante         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 2.177      ;
+; 2.042 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|esiguiente[2]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 2.348      ;
++-------+--------------------------------------+-----------------------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'reloj'                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                   ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------+
+; -1.941 ; 1.000        ; 2.941          ; Port Rate        ; reloj ; Rise       ; reloj                    ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[0]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[0]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[10] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[10] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[11] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[11] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[12] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[12] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[13] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[13] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[14] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[14] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[15] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[15] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[16] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[16] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[17] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[17] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[18] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[18] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[19] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[19] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[1]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[1]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[20] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[20] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[21] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[21] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[22] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[22] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[23] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[23] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[24] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[24] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[25] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[25] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[26] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[26] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[27] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[27] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[2]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[2]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[3]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[3]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[4]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[4]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[5]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[5]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[6]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[6]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[7]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[7]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[8]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[8]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[9]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[9]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[0]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[0]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[10]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[10]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[11]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[11]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[12]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[12]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[13]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[13]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[14]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[14]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[15]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[15]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[16]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[16]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[17]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[17]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[18]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[18]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[19]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[19]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[1]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[1]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[20]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[20]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[21]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[21]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[22]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[22]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[23]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[23]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[24]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[24]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[25]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[25]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[26]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[26]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[27]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[27]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[2]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[2]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[3]|clk      ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'divider:inst1|cuenta[25]'                                                                                  ;
++--------+--------------+----------------+------------------+--------------------------+------------+-----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                    ; Clock Edge ; Target                                  ;
++--------+--------------+----------------+------------------+--------------------------+------------+-----------------------------------------+
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|adelante         ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|adelante         ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|atras            ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|atras            ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|esiguiente[0]    ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|esiguiente[0]    ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|esiguiente[1]    ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|esiguiente[1]    ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|esiguiente[2]    ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|esiguiente[2]    ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|esiguiente[3]    ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|esiguiente[3]    ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|giro_der         ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|giro_der         ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|giro_izq         ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|giro_izq         ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|out_epresente[0] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|out_epresente[0] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|out_epresente[1] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|out_epresente[1] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|out_epresente[2] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|out_epresente[2] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|out_epresente[3] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|out_epresente[3] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst1|cuenta[25]|regout                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst1|cuenta[25]|regout                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst1|cuenta[25]~clkctrl|inclk[0]       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst1|cuenta[25]~clkctrl|inclk[0]       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst1|cuenta[25]~clkctrl|outclk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst1|cuenta[25]~clkctrl|outclk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|adelante|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|adelante|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|atras|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|atras|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|esiguiente[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|esiguiente[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|esiguiente[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|esiguiente[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|esiguiente[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|esiguiente[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|esiguiente[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|esiguiente[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|giro_der|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|giro_der|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|giro_izq|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|giro_izq|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|out_epresente[0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|out_epresente[0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|out_epresente[1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|out_epresente[1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|out_epresente[2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|out_epresente[2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|out_epresente[3]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|out_epresente[3]|clk               ;
++--------+--------------+----------------+------------------+--------------------------+------------+-----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Setup Times                                                                                  ;
++-----------+--------------------------+-------+-------+------------+--------------------------+
+; Data Port ; Clock Port               ; Rise  ; Fall  ; Clock Edge ; Clock Reference          ;
++-----------+--------------------------+-------+-------+------------+--------------------------+
+; S[*]      ; divider:inst1|cuenta[25] ; 6.144 ; 6.144 ; Rise       ; divider:inst1|cuenta[25] ;
+;  S[0]     ; divider:inst1|cuenta[25] ; 5.640 ; 5.640 ; Rise       ; divider:inst1|cuenta[25] ;
+;  S[1]     ; divider:inst1|cuenta[25] ; 6.144 ; 6.144 ; Rise       ; divider:inst1|cuenta[25] ;
+; reset     ; divider:inst1|cuenta[25] ; 6.646 ; 6.646 ; Rise       ; divider:inst1|cuenta[25] ;
++-----------+--------------------------+-------+-------+------------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                     ;
++-----------+--------------------------+--------+--------+------------+--------------------------+
+; Data Port ; Clock Port               ; Rise   ; Fall   ; Clock Edge ; Clock Reference          ;
++-----------+--------------------------+--------+--------+------------+--------------------------+
+; S[*]      ; divider:inst1|cuenta[25] ; -4.959 ; -4.959 ; Rise       ; divider:inst1|cuenta[25] ;
+;  S[0]     ; divider:inst1|cuenta[25] ; -4.959 ; -4.959 ; Rise       ; divider:inst1|cuenta[25] ;
+;  S[1]     ; divider:inst1|cuenta[25] ; -5.455 ; -5.455 ; Rise       ; divider:inst1|cuenta[25] ;
+; reset     ; divider:inst1|cuenta[25] ; -5.126 ; -5.126 ; Rise       ; divider:inst1|cuenta[25] ;
++-----------+--------------------------+--------+--------+------------+--------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                            ;
++---------------+--------------------------+-------+-------+------------+--------------------------+
+; Data Port     ; Clock Port               ; Rise  ; Fall  ; Clock Edge ; Clock Reference          ;
++---------------+--------------------------+-------+-------+------------+--------------------------+
+; adelante      ; divider:inst1|cuenta[25] ; 7.206 ; 7.206 ; Rise       ; divider:inst1|cuenta[25] ;
+; atras         ; divider:inst1|cuenta[25] ; 7.168 ; 7.168 ; Rise       ; divider:inst1|cuenta[25] ;
+; giro_der      ; divider:inst1|cuenta[25] ; 7.184 ; 7.184 ; Rise       ; divider:inst1|cuenta[25] ;
+; giro_izq      ; divider:inst1|cuenta[25] ; 7.138 ; 7.138 ; Rise       ; divider:inst1|cuenta[25] ;
+; out_state[*]  ; divider:inst1|cuenta[25] ; 7.553 ; 7.553 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[0] ; divider:inst1|cuenta[25] ; 7.488 ; 7.488 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[1] ; divider:inst1|cuenta[25] ; 7.525 ; 7.525 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[2] ; divider:inst1|cuenta[25] ; 7.038 ; 7.038 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[3] ; divider:inst1|cuenta[25] ; 7.553 ; 7.553 ; Rise       ; divider:inst1|cuenta[25] ;
++---------------+--------------------------+-------+-------+------------+--------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                    ;
++---------------+--------------------------+-------+-------+------------+--------------------------+
+; Data Port     ; Clock Port               ; Rise  ; Fall  ; Clock Edge ; Clock Reference          ;
++---------------+--------------------------+-------+-------+------------+--------------------------+
+; adelante      ; divider:inst1|cuenta[25] ; 7.206 ; 7.206 ; Rise       ; divider:inst1|cuenta[25] ;
+; atras         ; divider:inst1|cuenta[25] ; 7.168 ; 7.168 ; Rise       ; divider:inst1|cuenta[25] ;
+; giro_der      ; divider:inst1|cuenta[25] ; 7.184 ; 7.184 ; Rise       ; divider:inst1|cuenta[25] ;
+; giro_izq      ; divider:inst1|cuenta[25] ; 7.138 ; 7.138 ; Rise       ; divider:inst1|cuenta[25] ;
+; out_state[*]  ; divider:inst1|cuenta[25] ; 7.038 ; 7.038 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[0] ; divider:inst1|cuenta[25] ; 7.488 ; 7.488 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[1] ; divider:inst1|cuenta[25] ; 7.525 ; 7.525 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[2] ; divider:inst1|cuenta[25] ; 7.038 ; 7.038 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[3] ; divider:inst1|cuenta[25] ; 7.553 ; 7.553 ; Rise       ; divider:inst1|cuenta[25] ;
++---------------+--------------------------+-------+-------+------------+--------------------------+
+
+
++---------------------------------------------------+
+; Fast Model Setup Summary                          ;
++--------------------------+--------+---------------+
+; Clock                    ; Slack  ; End Point TNS ;
++--------------------------+--------+---------------+
+; reloj                    ; -1.081 ; -10.470       ;
+; divider:inst1|cuenta[25] ; 0.112  ; 0.000         ;
++--------------------------+--------+---------------+
+
+
++---------------------------------------------------+
+; Fast Model Hold Summary                           ;
++--------------------------+--------+---------------+
+; Clock                    ; Slack  ; End Point TNS ;
++--------------------------+--------+---------------+
+; reloj                    ; -1.218 ; -4.001        ;
+; divider:inst1|cuenta[25] ; 0.215  ; 0.000         ;
++--------------------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary            ;
++--------------------------+--------+---------------+
+; Clock                    ; Slack  ; End Point TNS ;
++--------------------------+--------+---------------+
+; reloj                    ; -1.380 ; -29.380       ;
+; divider:inst1|cuenta[25] ; -0.500 ; -12.000       ;
++--------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'reloj'                                                                                                          ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; -1.081 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 2.113      ;
+; -0.895 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.922      ;
+; -0.870 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 1.902      ;
+; -0.845 ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.872      ;
+; -0.825 ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.852      ;
+; -0.800 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[25] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 1.832      ;
+; -0.790 ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.817      ;
+; -0.765 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[24] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 1.797      ;
+; -0.736 ; divider:inst1|cuenta[5]  ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.763      ;
+; -0.730 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[23] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 1.762      ;
+; -0.695 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[22] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 1.727      ;
+; -0.684 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.711      ;
+; -0.663 ; divider:inst1|cuenta[6]  ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.690      ;
+; -0.634 ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.661      ;
+; -0.614 ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.641      ;
+; -0.614 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[25] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.641      ;
+; -0.611 ; divider:inst1|cuenta[7]  ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.638      ;
+; -0.601 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[21] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 1.633      ;
+; -0.594 ; divider:inst1|cuenta[8]  ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.621      ;
+; -0.579 ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.606      ;
+; -0.579 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[24] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.606      ;
+; -0.569 ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.596      ;
+; -0.566 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[20] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 1.598      ;
+; -0.564 ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[25] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.591      ;
+; -0.544 ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[25] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.571      ;
+; -0.544 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[23] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.571      ;
+; -0.542 ; divider:inst1|cuenta[9]  ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.569      ;
+; -0.531 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[19] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 1.563      ;
+; -0.529 ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[24] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.556      ;
+; -0.525 ; divider:inst1|cuenta[5]  ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.552      ;
+; -0.524 ; divider:inst1|cuenta[10] ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.551      ;
+; -0.509 ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[25] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.536      ;
+; -0.509 ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[24] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.536      ;
+; -0.509 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[22] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.536      ;
+; -0.496 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[18] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 1.528      ;
+; -0.494 ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[23] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.521      ;
+; -0.489 ; divider:inst1|cuenta[6]  ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.516      ;
+; -0.474 ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[24] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.501      ;
+; -0.474 ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[23] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.501      ;
+; -0.474 ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.501      ;
+; -0.473 ; divider:inst1|cuenta[11] ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.500      ;
+; -0.470 ; divider:inst1|cuenta[7]  ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.497      ;
+; -0.461 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[17] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 1.493      ;
+; -0.459 ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[22] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.486      ;
+; -0.455 ; divider:inst1|cuenta[5]  ; divider:inst1|cuenta[25] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.482      ;
+; -0.452 ; divider:inst1|cuenta[6]  ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.479      ;
+; -0.450 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.477      ;
+; -0.449 ; divider:inst1|cuenta[10] ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.476      ;
+; -0.439 ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[23] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.466      ;
+; -0.439 ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[22] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.466      ;
+; -0.438 ; divider:inst1|cuenta[12] ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.465      ;
+; -0.429 ; divider:inst1|cuenta[13] ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.456      ;
+; -0.429 ; divider:inst1|cuenta[11] ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.456      ;
+; -0.426 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[16] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 1.458      ;
+; -0.425 ; divider:inst1|cuenta[13] ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.452      ;
+; -0.420 ; divider:inst1|cuenta[5]  ; divider:inst1|cuenta[24] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.447      ;
+; -0.415 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[21] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.442      ;
+; -0.404 ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[22] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.431      ;
+; -0.400 ; divider:inst1|cuenta[7]  ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.427      ;
+; -0.394 ; divider:inst1|cuenta[5]  ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.421      ;
+; -0.391 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[15] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 1.423      ;
+; -0.385 ; divider:inst1|cuenta[5]  ; divider:inst1|cuenta[23] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.412      ;
+; -0.383 ; divider:inst1|cuenta[8]  ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.410      ;
+; -0.382 ; divider:inst1|cuenta[6]  ; divider:inst1|cuenta[25] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.409      ;
+; -0.380 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[20] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.407      ;
+; -0.366 ; divider:inst1|cuenta[8]  ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.393      ;
+; -0.365 ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[21] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.392      ;
+; -0.356 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[14] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 1.388      ;
+; -0.350 ; divider:inst1|cuenta[5]  ; divider:inst1|cuenta[22] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.377      ;
+; -0.347 ; divider:inst1|cuenta[6]  ; divider:inst1|cuenta[24] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.374      ;
+; -0.345 ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[21] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.372      ;
+; -0.345 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[19] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.372      ;
+; -0.344 ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.371      ;
+; -0.331 ; divider:inst1|cuenta[9]  ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.358      ;
+; -0.330 ; divider:inst1|cuenta[7]  ; divider:inst1|cuenta[25] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.357      ;
+; -0.330 ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[20] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.357      ;
+; -0.313 ; divider:inst1|cuenta[10] ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.340      ;
+; -0.313 ; divider:inst1|cuenta[8]  ; divider:inst1|cuenta[25] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.340      ;
+; -0.312 ; divider:inst1|cuenta[6]  ; divider:inst1|cuenta[23] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.339      ;
+; -0.310 ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[21] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.337      ;
+; -0.310 ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[20] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.337      ;
+; -0.310 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[18] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.337      ;
+; -0.307 ; divider:inst1|cuenta[9]  ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.334      ;
+; -0.303 ; divider:inst1|cuenta[14] ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 1.335      ;
+; -0.295 ; divider:inst1|cuenta[7]  ; divider:inst1|cuenta[24] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.322      ;
+; -0.295 ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[19] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.322      ;
+; -0.292 ; divider:inst1|cuenta[15] ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; 0.000      ; 1.324      ;
+; -0.288 ; divider:inst1|cuenta[15] ; divider:inst1|cuenta[26] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 1.320      ;
+; -0.281 ; divider:inst1|cuenta[12] ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.308      ;
+; -0.279 ; divider:inst1|cuenta[14] ; divider:inst1|cuenta[0]  ; reloj        ; reloj       ; 1.000        ; 0.000      ; 1.311      ;
+; -0.278 ; divider:inst1|cuenta[8]  ; divider:inst1|cuenta[24] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.305      ;
+; -0.277 ; divider:inst1|cuenta[6]  ; divider:inst1|cuenta[22] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.304      ;
+; -0.275 ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[20] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.302      ;
+; -0.275 ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[19] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.302      ;
+; -0.275 ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[17] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.302      ;
+; -0.264 ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[13] ; reloj        ; reloj       ; 1.000        ; 0.005      ; 1.301      ;
+; -0.262 ; divider:inst1|cuenta[11] ; divider:inst1|cuenta[27] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.289      ;
+; -0.261 ; divider:inst1|cuenta[9]  ; divider:inst1|cuenta[25] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.288      ;
+; -0.260 ; divider:inst1|cuenta[7]  ; divider:inst1|cuenta[23] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.287      ;
+; -0.260 ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[18] ; reloj        ; reloj       ; 1.000        ; -0.005     ; 1.287      ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'divider:inst1|cuenta[25]'                                                                                                                                          ;
++-------+--------------------------------------+-----------------------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                                 ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+-----------------------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.112 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|giro_der         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.920      ;
+; 0.112 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|atras            ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.920      ;
+; 0.112 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|giro_izq         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.920      ;
+; 0.186 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|giro_der         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.846      ;
+; 0.186 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|atras            ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.846      ;
+; 0.186 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|giro_izq         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.846      ;
+; 0.195 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|esiguiente[2]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.837      ;
+; 0.195 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|adelante         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.837      ;
+; 0.238 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|esiguiente[1]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.794      ;
+; 0.266 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|adelante         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.766      ;
+; 0.267 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|esiguiente[1]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.765      ;
+; 0.301 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|adelante         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.731      ;
+; 0.317 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|esiguiente[0]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.715      ;
+; 0.334 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|esiguiente[1]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.698      ;
+; 0.335 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|esiguiente[2]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.697      ;
+; 0.382 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|esiguiente[2]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.650      ;
+; 0.397 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|atras            ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.635      ;
+; 0.397 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|giro_izq         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.635      ;
+; 0.404 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|giro_der         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.628      ;
+; 0.407 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|esiguiente[1]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.625      ;
+; 0.412 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|esiguiente[3]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.620      ;
+; 0.446 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|esiguiente[0]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.586      ;
+; 0.456 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|giro_der         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.576      ;
+; 0.456 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|esiguiente[2]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.576      ;
+; 0.461 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|giro_izq         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.571      ;
+; 0.462 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|adelante         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.570      ;
+; 0.471 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|out_epresente[1] ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.561      ;
+; 0.475 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|esiguiente[0]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.557      ;
+; 0.486 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|atras            ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.546      ;
+; 0.497 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|esiguiente[3]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.535      ;
+; 0.550 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|out_epresente[2] ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.482      ;
+; 0.552 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|out_epresente[3] ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.480      ;
+; 0.564 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|out_epresente[0] ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.468      ;
+; 0.627 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|esiguiente[3]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.405      ;
+; 0.665 ; controlMovimiento:inst|adelante      ; controlMovimiento:inst|adelante         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|esiguiente[0]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|esiguiente[3]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; 0.000      ; 0.367      ;
++-------+--------------------------------------+-----------------------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'reloj'                                                                                                                       ;
++--------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+; -1.218 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; reloj       ; 0.000        ; 1.444      ; 0.519      ;
+; -1.045 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[27] ; divider:inst1|cuenta[25] ; reloj       ; 0.000        ; 1.444      ; 0.692      ;
+; -0.871 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[26] ; divider:inst1|cuenta[25] ; reloj       ; 0.000        ; 1.444      ; 0.866      ;
+; -0.867 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[25] ; reloj       ; 0.000        ; 1.444      ; 0.870      ;
+; -0.718 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; reloj       ; -0.500       ; 1.444      ; 0.519      ;
+; -0.545 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[27] ; divider:inst1|cuenta[25] ; reloj       ; -0.500       ; 1.444      ; 0.692      ;
+; -0.371 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[26] ; divider:inst1|cuenta[25] ; reloj       ; -0.500       ; 1.444      ; 0.866      ;
+; -0.367 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[0]  ; divider:inst1|cuenta[25] ; reloj       ; -0.500       ; 1.444      ; 0.870      ;
+; 0.240  ; divider:inst1|cuenta[27] ; divider:inst1|cuenta[27] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.392      ;
+; 0.355  ; divider:inst1|cuenta[14] ; divider:inst1|cuenta[14] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.507      ;
+; 0.361  ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[2]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361  ; divider:inst1|cuenta[5]  ; divider:inst1|cuenta[5]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361  ; divider:inst1|cuenta[7]  ; divider:inst1|cuenta[7]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.513      ;
+; 0.362  ; divider:inst1|cuenta[9]  ; divider:inst1|cuenta[9]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.514      ;
+; 0.363  ; divider:inst1|cuenta[11] ; divider:inst1|cuenta[11] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363  ; divider:inst1|cuenta[12] ; divider:inst1|cuenta[12] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363  ; divider:inst1|cuenta[13] ; divider:inst1|cuenta[13] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363  ; divider:inst1|cuenta[15] ; divider:inst1|cuenta[15] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363  ; divider:inst1|cuenta[16] ; divider:inst1|cuenta[16] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363  ; divider:inst1|cuenta[18] ; divider:inst1|cuenta[18] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363  ; divider:inst1|cuenta[21] ; divider:inst1|cuenta[21] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.515      ;
+; 0.364  ; divider:inst1|cuenta[23] ; divider:inst1|cuenta[23] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.516      ;
+; 0.373  ; divider:inst1|cuenta[24] ; divider:inst1|cuenta[24] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.525      ;
+; 0.373  ; divider:inst1|cuenta[22] ; divider:inst1|cuenta[22] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.525      ;
+; 0.374  ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[3]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374  ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[1]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374  ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[4]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374  ; divider:inst1|cuenta[19] ; divider:inst1|cuenta[19] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374  ; divider:inst1|cuenta[17] ; divider:inst1|cuenta[17] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374  ; divider:inst1|cuenta[20] ; divider:inst1|cuenta[20] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.526      ;
+; 0.376  ; divider:inst1|cuenta[6]  ; divider:inst1|cuenta[6]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.528      ;
+; 0.377  ; divider:inst1|cuenta[8]  ; divider:inst1|cuenta[8]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.529      ;
+; 0.377  ; divider:inst1|cuenta[10] ; divider:inst1|cuenta[10] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.529      ;
+; 0.493  ; divider:inst1|cuenta[14] ; divider:inst1|cuenta[15] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.645      ;
+; 0.499  ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[3]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499  ; divider:inst1|cuenta[7]  ; divider:inst1|cuenta[8]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.651      ;
+; 0.500  ; divider:inst1|cuenta[9]  ; divider:inst1|cuenta[10] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.652      ;
+; 0.501  ; divider:inst1|cuenta[11] ; divider:inst1|cuenta[12] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.653      ;
+; 0.501  ; divider:inst1|cuenta[12] ; divider:inst1|cuenta[13] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.653      ;
+; 0.501  ; divider:inst1|cuenta[15] ; divider:inst1|cuenta[16] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.653      ;
+; 0.501  ; divider:inst1|cuenta[18] ; divider:inst1|cuenta[19] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.653      ;
+; 0.501  ; divider:inst1|cuenta[16] ; divider:inst1|cuenta[17] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.653      ;
+; 0.502  ; divider:inst1|cuenta[23] ; divider:inst1|cuenta[24] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.654      ;
+; 0.513  ; divider:inst1|cuenta[24] ; divider:inst1|cuenta[25] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.665      ;
+; 0.513  ; divider:inst1|cuenta[22] ; divider:inst1|cuenta[23] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.665      ;
+; 0.514  ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[2]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.666      ;
+; 0.514  ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[5]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.666      ;
+; 0.514  ; divider:inst1|cuenta[17] ; divider:inst1|cuenta[18] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.666      ;
+; 0.514  ; divider:inst1|cuenta[20] ; divider:inst1|cuenta[21] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.666      ;
+; 0.514  ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[4]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.666      ;
+; 0.514  ; divider:inst1|cuenta[19] ; divider:inst1|cuenta[20] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.666      ;
+; 0.516  ; divider:inst1|cuenta[6]  ; divider:inst1|cuenta[7]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.668      ;
+; 0.517  ; divider:inst1|cuenta[8]  ; divider:inst1|cuenta[9]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.669      ;
+; 0.517  ; divider:inst1|cuenta[10] ; divider:inst1|cuenta[11] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.669      ;
+; 0.528  ; divider:inst1|cuenta[14] ; divider:inst1|cuenta[16] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.680      ;
+; 0.534  ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[4]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.686      ;
+; 0.534  ; divider:inst1|cuenta[7]  ; divider:inst1|cuenta[9]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.686      ;
+; 0.535  ; divider:inst1|cuenta[9]  ; divider:inst1|cuenta[11] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.687      ;
+; 0.536  ; divider:inst1|cuenta[11] ; divider:inst1|cuenta[13] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.688      ;
+; 0.536  ; divider:inst1|cuenta[15] ; divider:inst1|cuenta[17] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.688      ;
+; 0.536  ; divider:inst1|cuenta[16] ; divider:inst1|cuenta[18] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.688      ;
+; 0.536  ; divider:inst1|cuenta[18] ; divider:inst1|cuenta[20] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.688      ;
+; 0.537  ; divider:inst1|cuenta[23] ; divider:inst1|cuenta[25] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.689      ;
+; 0.548  ; divider:inst1|cuenta[22] ; divider:inst1|cuenta[24] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.700      ;
+; 0.549  ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[3]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.701      ;
+; 0.549  ; divider:inst1|cuenta[17] ; divider:inst1|cuenta[19] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.701      ;
+; 0.549  ; divider:inst1|cuenta[3]  ; divider:inst1|cuenta[5]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.701      ;
+; 0.549  ; divider:inst1|cuenta[19] ; divider:inst1|cuenta[21] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.701      ;
+; 0.551  ; divider:inst1|cuenta[6]  ; divider:inst1|cuenta[8]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.703      ;
+; 0.552  ; divider:inst1|cuenta[8]  ; divider:inst1|cuenta[10] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.704      ;
+; 0.552  ; divider:inst1|cuenta[10] ; divider:inst1|cuenta[12] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.704      ;
+; 0.553  ; divider:inst1|cuenta[13] ; divider:inst1|cuenta[14] ; reloj                    ; reloj       ; 0.000        ; -0.005     ; 0.700      ;
+; 0.554  ; divider:inst1|cuenta[5]  ; divider:inst1|cuenta[6]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.706      ;
+; 0.556  ; divider:inst1|cuenta[21] ; divider:inst1|cuenta[22] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.708      ;
+; 0.563  ; divider:inst1|cuenta[14] ; divider:inst1|cuenta[17] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.715      ;
+; 0.569  ; divider:inst1|cuenta[2]  ; divider:inst1|cuenta[5]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.721      ;
+; 0.569  ; divider:inst1|cuenta[7]  ; divider:inst1|cuenta[10] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.721      ;
+; 0.570  ; divider:inst1|cuenta[9]  ; divider:inst1|cuenta[12] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.722      ;
+; 0.571  ; divider:inst1|cuenta[15] ; divider:inst1|cuenta[18] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.723      ;
+; 0.571  ; divider:inst1|cuenta[16] ; divider:inst1|cuenta[19] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.723      ;
+; 0.571  ; divider:inst1|cuenta[18] ; divider:inst1|cuenta[21] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.723      ;
+; 0.583  ; divider:inst1|cuenta[26] ; divider:inst1|cuenta[27] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.735      ;
+; 0.583  ; divider:inst1|cuenta[22] ; divider:inst1|cuenta[25] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.735      ;
+; 0.583  ; divider:inst1|cuenta[24] ; divider:inst1|cuenta[27] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.735      ;
+; 0.584  ; divider:inst1|cuenta[1]  ; divider:inst1|cuenta[4]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.736      ;
+; 0.584  ; divider:inst1|cuenta[17] ; divider:inst1|cuenta[20] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.736      ;
+; 0.586  ; divider:inst1|cuenta[6]  ; divider:inst1|cuenta[9]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.738      ;
+; 0.587  ; divider:inst1|cuenta[8]  ; divider:inst1|cuenta[11] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.739      ;
+; 0.587  ; divider:inst1|cuenta[10] ; divider:inst1|cuenta[13] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.739      ;
+; 0.588  ; divider:inst1|cuenta[13] ; divider:inst1|cuenta[15] ; reloj                    ; reloj       ; 0.000        ; -0.005     ; 0.735      ;
+; 0.589  ; divider:inst1|cuenta[5]  ; divider:inst1|cuenta[7]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.741      ;
+; 0.591  ; divider:inst1|cuenta[21] ; divider:inst1|cuenta[23] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.743      ;
+; 0.593  ; divider:inst1|cuenta[12] ; divider:inst1|cuenta[14] ; reloj                    ; reloj       ; 0.000        ; -0.005     ; 0.740      ;
+; 0.598  ; divider:inst1|cuenta[14] ; divider:inst1|cuenta[18] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.750      ;
+; 0.604  ; divider:inst1|cuenta[7]  ; divider:inst1|cuenta[11] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.756      ;
+; 0.605  ; divider:inst1|cuenta[9]  ; divider:inst1|cuenta[13] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.757      ;
+; 0.606  ; divider:inst1|cuenta[15] ; divider:inst1|cuenta[19] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.758      ;
+; 0.606  ; divider:inst1|cuenta[16] ; divider:inst1|cuenta[20] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.758      ;
+; 0.607  ; divider:inst1|cuenta[23] ; divider:inst1|cuenta[27] ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.759      ;
+; 0.608  ; divider:inst1|cuenta[4]  ; divider:inst1|cuenta[6]  ; reloj                    ; reloj       ; 0.000        ; 0.000      ; 0.760      ;
++--------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'divider:inst1|cuenta[25]'                                                                                                                                           ;
++-------+--------------------------------------+-----------------------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                                 ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+-----------------------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.215 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|esiguiente[1]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|esiguiente[0]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|esiguiente[3]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|esiguiente[2]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; controlMovimiento:inst|adelante      ; controlMovimiento:inst|adelante         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.253 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|esiguiente[3]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.405      ;
+; 0.316 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|out_epresente[0] ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.468      ;
+; 0.328 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|out_epresente[3] ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.480      ;
+; 0.330 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|out_epresente[2] ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.482      ;
+; 0.356 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|giro_der         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.508      ;
+; 0.383 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|esiguiente[3]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.535      ;
+; 0.388 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|giro_der         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.540      ;
+; 0.394 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|atras            ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.546      ;
+; 0.397 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|esiguiente[2]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.549      ;
+; 0.405 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|esiguiente[0]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.557      ;
+; 0.409 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|out_epresente[1] ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.561      ;
+; 0.411 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|giro_izq         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.563      ;
+; 0.411 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|atras            ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.563      ;
+; 0.418 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|adelante         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.570      ;
+; 0.419 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|giro_izq         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.571      ;
+; 0.420 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|esiguiente[1]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.572      ;
+; 0.434 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|esiguiente[0]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.586      ;
+; 0.468 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|esiguiente[3]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.620      ;
+; 0.472 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|esiguiente[0]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.624      ;
+; 0.474 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|giro_izq         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.626      ;
+; 0.475 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|atras            ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.627      ;
+; 0.476 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|giro_der         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.628      ;
+; 0.483 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|atras            ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.635      ;
+; 0.483 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|giro_izq         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.635      ;
+; 0.494 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|esiguiente[1]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.646      ;
+; 0.497 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|adelante         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.649      ;
+; 0.511 ; controlMovimiento:inst|esiguiente[3] ; controlMovimiento:inst|giro_der         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.663      ;
+; 0.540 ; controlMovimiento:inst|esiguiente[2] ; controlMovimiento:inst|adelante         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.692      ;
+; 0.542 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|esiguiente[1]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.694      ;
+; 0.544 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|esiguiente[2]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.696      ;
+; 0.579 ; controlMovimiento:inst|esiguiente[1] ; controlMovimiento:inst|adelante         ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.645 ; controlMovimiento:inst|esiguiente[0] ; controlMovimiento:inst|esiguiente[2]    ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.000      ; 0.797      ;
++-------+--------------------------------------+-----------------------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'reloj'                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                   ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; reloj ; Rise       ; reloj                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[25] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[25] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[26] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[26] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[27] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[27] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divider:inst1|cuenta[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divider:inst1|cuenta[9]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[0]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[0]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[10]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[10]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[11]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[11]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[12]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[12]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[13]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[13]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[14]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[14]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[15]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[15]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[16]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[16]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[17]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[17]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[18]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[18]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[19]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[19]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[1]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[1]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[20]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[20]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[21]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[21]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[22]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[22]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[23]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[23]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[24]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[24]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[25]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[25]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[26]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[26]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[27]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[27]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[2]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; inst1|cuenta[2]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; inst1|cuenta[3]|clk      ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'divider:inst1|cuenta[25]'                                                                                  ;
++--------+--------------+----------------+------------------+--------------------------+------------+-----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                    ; Clock Edge ; Target                                  ;
++--------+--------------+----------------+------------------+--------------------------+------------+-----------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|adelante         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|adelante         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|atras            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|atras            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|esiguiente[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|esiguiente[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|esiguiente[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|esiguiente[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|esiguiente[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|esiguiente[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|esiguiente[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|esiguiente[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|giro_der         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|giro_der         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|giro_izq         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|giro_izq         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|out_epresente[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|out_epresente[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|out_epresente[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|out_epresente[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|out_epresente[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|out_epresente[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|out_epresente[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; controlMovimiento:inst|out_epresente[3] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst1|cuenta[25]|regout                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst1|cuenta[25]|regout                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst1|cuenta[25]~clkctrl|inclk[0]       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst1|cuenta[25]~clkctrl|inclk[0]       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst1|cuenta[25]~clkctrl|outclk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst1|cuenta[25]~clkctrl|outclk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|adelante|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|adelante|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|atras|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|atras|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|esiguiente[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|esiguiente[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|esiguiente[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|esiguiente[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|esiguiente[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|esiguiente[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|esiguiente[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|esiguiente[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|giro_der|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|giro_der|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|giro_izq|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|giro_izq|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|out_epresente[0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|out_epresente[0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|out_epresente[1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|out_epresente[1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|out_epresente[2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|out_epresente[2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divider:inst1|cuenta[25] ; Rise       ; inst|out_epresente[3]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divider:inst1|cuenta[25] ; Rise       ; inst|out_epresente[3]|clk               ;
++--------+--------------+----------------+------------------+--------------------------+------------+-----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Setup Times                                                                                  ;
++-----------+--------------------------+-------+-------+------------+--------------------------+
+; Data Port ; Clock Port               ; Rise  ; Fall  ; Clock Edge ; Clock Reference          ;
++-----------+--------------------------+-------+-------+------------+--------------------------+
+; S[*]      ; divider:inst1|cuenta[25] ; 2.719 ; 2.719 ; Rise       ; divider:inst1|cuenta[25] ;
+;  S[0]     ; divider:inst1|cuenta[25] ; 2.548 ; 2.548 ; Rise       ; divider:inst1|cuenta[25] ;
+;  S[1]     ; divider:inst1|cuenta[25] ; 2.719 ; 2.719 ; Rise       ; divider:inst1|cuenta[25] ;
+; reset     ; divider:inst1|cuenta[25] ; 2.883 ; 2.883 ; Rise       ; divider:inst1|cuenta[25] ;
++-----------+--------------------------+-------+-------+------------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                     ;
++-----------+--------------------------+--------+--------+------------+--------------------------+
+; Data Port ; Clock Port               ; Rise   ; Fall   ; Clock Edge ; Clock Reference          ;
++-----------+--------------------------+--------+--------+------------+--------------------------+
+; S[*]      ; divider:inst1|cuenta[25] ; -2.303 ; -2.303 ; Rise       ; divider:inst1|cuenta[25] ;
+;  S[0]     ; divider:inst1|cuenta[25] ; -2.303 ; -2.303 ; Rise       ; divider:inst1|cuenta[25] ;
+;  S[1]     ; divider:inst1|cuenta[25] ; -2.474 ; -2.474 ; Rise       ; divider:inst1|cuenta[25] ;
+; reset     ; divider:inst1|cuenta[25] ; -2.511 ; -2.511 ; Rise       ; divider:inst1|cuenta[25] ;
++-----------+--------------------------+--------+--------+------------+--------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                            ;
++---------------+--------------------------+-------+-------+------------+--------------------------+
+; Data Port     ; Clock Port               ; Rise  ; Fall  ; Clock Edge ; Clock Reference          ;
++---------------+--------------------------+-------+-------+------------+--------------------------+
+; adelante      ; divider:inst1|cuenta[25] ; 3.241 ; 3.241 ; Rise       ; divider:inst1|cuenta[25] ;
+; atras         ; divider:inst1|cuenta[25] ; 3.220 ; 3.220 ; Rise       ; divider:inst1|cuenta[25] ;
+; giro_der      ; divider:inst1|cuenta[25] ; 3.219 ; 3.219 ; Rise       ; divider:inst1|cuenta[25] ;
+; giro_izq      ; divider:inst1|cuenta[25] ; 3.193 ; 3.193 ; Rise       ; divider:inst1|cuenta[25] ;
+; out_state[*]  ; divider:inst1|cuenta[25] ; 3.353 ; 3.353 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[0] ; divider:inst1|cuenta[25] ; 3.313 ; 3.313 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[1] ; divider:inst1|cuenta[25] ; 3.338 ; 3.338 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[2] ; divider:inst1|cuenta[25] ; 3.149 ; 3.149 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[3] ; divider:inst1|cuenta[25] ; 3.353 ; 3.353 ; Rise       ; divider:inst1|cuenta[25] ;
++---------------+--------------------------+-------+-------+------------+--------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                    ;
++---------------+--------------------------+-------+-------+------------+--------------------------+
+; Data Port     ; Clock Port               ; Rise  ; Fall  ; Clock Edge ; Clock Reference          ;
++---------------+--------------------------+-------+-------+------------+--------------------------+
+; adelante      ; divider:inst1|cuenta[25] ; 3.241 ; 3.241 ; Rise       ; divider:inst1|cuenta[25] ;
+; atras         ; divider:inst1|cuenta[25] ; 3.220 ; 3.220 ; Rise       ; divider:inst1|cuenta[25] ;
+; giro_der      ; divider:inst1|cuenta[25] ; 3.219 ; 3.219 ; Rise       ; divider:inst1|cuenta[25] ;
+; giro_izq      ; divider:inst1|cuenta[25] ; 3.193 ; 3.193 ; Rise       ; divider:inst1|cuenta[25] ;
+; out_state[*]  ; divider:inst1|cuenta[25] ; 3.149 ; 3.149 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[0] ; divider:inst1|cuenta[25] ; 3.313 ; 3.313 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[1] ; divider:inst1|cuenta[25] ; 3.338 ; 3.338 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[2] ; divider:inst1|cuenta[25] ; 3.149 ; 3.149 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[3] ; divider:inst1|cuenta[25] ; 3.353 ; 3.353 ; Rise       ; divider:inst1|cuenta[25] ;
++---------------+--------------------------+-------+-------+------------+--------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                     ;
++---------------------------+---------+--------+----------+---------+---------------------+
+; Clock                     ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------------+---------+--------+----------+---------+---------------------+
+; Worst-case Slack          ; -4.882  ; -1.875 ; N/A      ; N/A     ; -1.941              ;
+;  divider:inst1|cuenta[25] ; -1.460  ; 0.215  ; N/A      ; N/A     ; -0.742              ;
+;  reloj                    ; -4.882  ; -1.875 ; N/A      ; N/A     ; -1.941              ;
+; Design-wide TNS           ; -92.743 ; -4.548 ; 0.0      ; 0.0     ; -61.301             ;
+;  divider:inst1|cuenta[25] ; -11.490 ; 0.000  ; N/A      ; N/A     ; -17.808             ;
+;  reloj                    ; -81.253 ; -4.548 ; N/A      ; N/A     ; -43.493             ;
++---------------------------+---------+--------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Setup Times                                                                                  ;
++-----------+--------------------------+-------+-------+------------+--------------------------+
+; Data Port ; Clock Port               ; Rise  ; Fall  ; Clock Edge ; Clock Reference          ;
++-----------+--------------------------+-------+-------+------------+--------------------------+
+; S[*]      ; divider:inst1|cuenta[25] ; 6.144 ; 6.144 ; Rise       ; divider:inst1|cuenta[25] ;
+;  S[0]     ; divider:inst1|cuenta[25] ; 5.640 ; 5.640 ; Rise       ; divider:inst1|cuenta[25] ;
+;  S[1]     ; divider:inst1|cuenta[25] ; 6.144 ; 6.144 ; Rise       ; divider:inst1|cuenta[25] ;
+; reset     ; divider:inst1|cuenta[25] ; 6.646 ; 6.646 ; Rise       ; divider:inst1|cuenta[25] ;
++-----------+--------------------------+-------+-------+------------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                     ;
++-----------+--------------------------+--------+--------+------------+--------------------------+
+; Data Port ; Clock Port               ; Rise   ; Fall   ; Clock Edge ; Clock Reference          ;
++-----------+--------------------------+--------+--------+------------+--------------------------+
+; S[*]      ; divider:inst1|cuenta[25] ; -2.303 ; -2.303 ; Rise       ; divider:inst1|cuenta[25] ;
+;  S[0]     ; divider:inst1|cuenta[25] ; -2.303 ; -2.303 ; Rise       ; divider:inst1|cuenta[25] ;
+;  S[1]     ; divider:inst1|cuenta[25] ; -2.474 ; -2.474 ; Rise       ; divider:inst1|cuenta[25] ;
+; reset     ; divider:inst1|cuenta[25] ; -2.511 ; -2.511 ; Rise       ; divider:inst1|cuenta[25] ;
++-----------+--------------------------+--------+--------+------------+--------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                            ;
++---------------+--------------------------+-------+-------+------------+--------------------------+
+; Data Port     ; Clock Port               ; Rise  ; Fall  ; Clock Edge ; Clock Reference          ;
++---------------+--------------------------+-------+-------+------------+--------------------------+
+; adelante      ; divider:inst1|cuenta[25] ; 7.206 ; 7.206 ; Rise       ; divider:inst1|cuenta[25] ;
+; atras         ; divider:inst1|cuenta[25] ; 7.168 ; 7.168 ; Rise       ; divider:inst1|cuenta[25] ;
+; giro_der      ; divider:inst1|cuenta[25] ; 7.184 ; 7.184 ; Rise       ; divider:inst1|cuenta[25] ;
+; giro_izq      ; divider:inst1|cuenta[25] ; 7.138 ; 7.138 ; Rise       ; divider:inst1|cuenta[25] ;
+; out_state[*]  ; divider:inst1|cuenta[25] ; 7.553 ; 7.553 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[0] ; divider:inst1|cuenta[25] ; 7.488 ; 7.488 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[1] ; divider:inst1|cuenta[25] ; 7.525 ; 7.525 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[2] ; divider:inst1|cuenta[25] ; 7.038 ; 7.038 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[3] ; divider:inst1|cuenta[25] ; 7.553 ; 7.553 ; Rise       ; divider:inst1|cuenta[25] ;
++---------------+--------------------------+-------+-------+------------+--------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                    ;
++---------------+--------------------------+-------+-------+------------+--------------------------+
+; Data Port     ; Clock Port               ; Rise  ; Fall  ; Clock Edge ; Clock Reference          ;
++---------------+--------------------------+-------+-------+------------+--------------------------+
+; adelante      ; divider:inst1|cuenta[25] ; 3.241 ; 3.241 ; Rise       ; divider:inst1|cuenta[25] ;
+; atras         ; divider:inst1|cuenta[25] ; 3.220 ; 3.220 ; Rise       ; divider:inst1|cuenta[25] ;
+; giro_der      ; divider:inst1|cuenta[25] ; 3.219 ; 3.219 ; Rise       ; divider:inst1|cuenta[25] ;
+; giro_izq      ; divider:inst1|cuenta[25] ; 3.193 ; 3.193 ; Rise       ; divider:inst1|cuenta[25] ;
+; out_state[*]  ; divider:inst1|cuenta[25] ; 3.149 ; 3.149 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[0] ; divider:inst1|cuenta[25] ; 3.313 ; 3.313 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[1] ; divider:inst1|cuenta[25] ; 3.338 ; 3.338 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[2] ; divider:inst1|cuenta[25] ; 3.149 ; 3.149 ; Rise       ; divider:inst1|cuenta[25] ;
+;  out_state[3] ; divider:inst1|cuenta[25] ; 3.353 ; 3.353 ; Rise       ; divider:inst1|cuenta[25] ;
++---------------+--------------------------+-------+-------+------------+--------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                 ;
++--------------------------+--------------------------+----------+----------+----------+----------+
+; From Clock               ; To Clock                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------------+--------------------------+----------+----------+----------+----------+
+; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 55       ; 0        ; 0        ; 0        ;
+; divider:inst1|cuenta[25] ; reloj                    ; 5        ; 5        ; 0        ; 0        ;
+; reloj                    ; reloj                    ; 457      ; 0        ; 0        ; 0        ;
++--------------------------+--------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                  ;
++--------------------------+--------------------------+----------+----------+----------+----------+
+; From Clock               ; To Clock                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------------+--------------------------+----------+----------+----------+----------+
+; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 55       ; 0        ; 0        ; 0        ;
+; divider:inst1|cuenta[25] ; reloj                    ; 5        ; 5        ; 0        ; 0        ;
+; reloj                    ; reloj                    ; 457      ; 0        ; 0        ; 0        ;
++--------------------------+--------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 20    ; 20   ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 8     ; 8    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Sep 21 22:36:44 2019
+Info: Command: quartus_sta practica2 -c practica2
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'practica2.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name divider:inst1|cuenta[25] divider:inst1|cuenta[25]
+    Info (332105): create_clock -period 1.000 -name reloj reloj
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -4.882
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -4.882       -81.253 reloj 
+    Info (332119):    -1.460       -11.490 divider:inst1|cuenta[25] 
+Info (332146): Worst-case hold slack is -1.875
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.875        -4.548 reloj 
+    Info (332119):     0.499         0.000 divider:inst1|cuenta[25] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.941
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.941       -43.493 reloj 
+    Info (332119):    -0.742       -17.808 divider:inst1|cuenta[25] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.081
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.081       -10.470 reloj 
+    Info (332119):     0.112         0.000 divider:inst1|cuenta[25] 
+Info (332146): Worst-case hold slack is -1.218
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.218        -4.001 reloj 
+    Info (332119):     0.215         0.000 divider:inst1|cuenta[25] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -29.380 reloj 
+    Info (332119):    -0.500       -12.000 divider:inst1|cuenta[25] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 299 megabytes
+    Info: Processing ended: Sat Sep 21 22:36:44 2019
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+
